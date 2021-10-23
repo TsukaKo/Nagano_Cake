@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :customers
   root to: 'homes#top'
   devise_for :users
 
