@@ -1,21 +1,31 @@
 class Admin::ItemsController < ApplicationController
-  
+
   def new
-  end 
-  
+    @items = Items.new
+  end
+
   def create
-  end 
-  
-  def index 
-  end 
-  
-  def show 
-  end 
-  
+    @items = Items.new(items_params)
+    @items.user_id = current_user.id
+    @items.save
+
+  end
+
+  def index
+    @items = Items.all
+  end
+
+  def show
+  end
+
   def edit
-  end 
-  
+  end
+
   def update
-  end 
-  
+  end
+
+  private
+
+  def items_params
+    params.require(:items).permit(:)
 end
