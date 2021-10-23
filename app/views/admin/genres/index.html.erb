@@ -1,5 +1,5 @@
 <div class="alert alert-dark" role="alert">
-  <h1>ジャンル一覧・追加</h1>
+  <h4>ジャンル一覧・追加</h4>
 </div>
 <%= form_with model:@genre, url:'/genre', local:true do |f| %>
   <h4>ジャンル名</h4>
@@ -14,6 +14,7 @@
   <thead>
     <tr>
       <th scope="col">ジャンル</th>
+      <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
