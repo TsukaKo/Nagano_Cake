@@ -1,7 +1,17 @@
 Rails.application.routes.draw do
-  devise_for :customers
+
   root to: 'homes#top'
-  devise_for :users
+
+  devise_for :customers, controllers: {
+    sessions: 'customers/sessions',
+    passwords: 'customers/passwords',
+    registrations: 'customers/registrations'
+  }
+  devise_for :admins, controllers: {
+    sessions: 'admin/sessions',
+    passwords: 'admin/passwords',
+    registrations: 'admin/registrations'
+  }
 
   scope module: :public do
     resources :items, only:[:index, :show]

@@ -1,0 +1,29 @@
+<div class="container px-8 px-sm-12">
+  <div class="row">
+
+    <div class="alert alert-dark" role="alert">
+      管理者ログイン
+    </div>
+
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="col-md-6 offset-md-3">
+        <div class="field">
+          <%= f.label :email %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        </div>
+      </div>
+      <div class="col-md-6 offset-md-3">
+        <div class="field">
+          <%= f.label :password %>
+          <%= f.password_field :password, autocomplete: "current-password" %>
+        </div>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Log in" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<%= render "admin/shared/links" %>
