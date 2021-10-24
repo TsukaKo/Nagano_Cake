@@ -1,9 +1,10 @@
 <div class="container px-8 px-sm-12">
   <div class="row">
 
-    <div class="alert alert-dark" role="alert">
+   <div class="col">
+     <h5 class="bg-secondary d-inline p-2">
       管理者ログイン
-    </div>
+    </h5>
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="col-md-6 offset-md-3">
@@ -18,12 +19,16 @@
           <%= f.password_field :password, autocomplete: "current-password" %>
         </div>
       </div>
+      <button type="button" class="btn btn-primary">Primary</button>
 
       <div class="actions">
         <%= f.submit "Log in" %>
       </div>
     <% end %>
+
+   </div>
+
   </div>
 </div>
 
-<%= render "admin/shared/links" %>
+
