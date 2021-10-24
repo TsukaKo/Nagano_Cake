@@ -7,7 +7,7 @@ class Admin::ItemsController < ApplicationController
   def create
     @items = Items.new(items_params)
     @items.save
-
+    redirect_to admin_item_path
   end
 
   def index
