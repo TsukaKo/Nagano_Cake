@@ -1,4 +1,7 @@
-<% @items.each do |image| %>
+<div class="alert alert-dark" role="alert">
+  <h4>商品一覧</h4>
+</div>
+<% @items.each do |item| %>
 <table class="table" >
   <tr>
     <th scope="col">商品id</th>
@@ -9,7 +12,14 @@
   </tr>
   <tbody>
     <tr>
-      <td></td>
+      <th scope="row"></th>
+      <%= link_to admin_item_path(item.id) do %>
+        <td><%= item.name %></td>
+      <% end %>
+      <td><%= item.price %></td>
+      <td><%= item.genre_id %></td>
+      <td><%= item.is_active %></td>
     </tr>
   </tbody>
 </table>
+<%= paginate @items %>

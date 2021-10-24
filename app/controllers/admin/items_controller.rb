@@ -6,16 +6,16 @@ class Admin::ItemsController < ApplicationController
 
   def create
     @items = Items.new(items_params)
-    @items.user_id = current_user.id
     @items.save
 
   end
 
   def index
-    @items = Items.all
+    @items = Items.page(params[:page]).reverse_order
   end
 
   def show
+    @item = Item.find(params[:id])
   end
 
   def edit
