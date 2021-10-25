@@ -1,6 +1,5 @@
 
 <h5 class="bg-secondary d-inline px2">商品一覧</h5>
-<% @items.each do |item| %>
 <table class="table" >
   <tr>
     <th scope="col">商品id</th>
@@ -9,7 +8,9 @@
     <th scope="col">ジャンル</th>
     <th scope="col">ステータス</th>
   </tr>
+
   <tbody>
+    <% @items.each do |item| %>
     <tr>
       <th scope="row"></th>
       <%= link_to admin_item_path(item.id) do %>
@@ -19,6 +20,7 @@
       <td><%= item.genre_id %></td>
       <td><%= item.is_active %></td>
     </tr>
+    <% end %>
   </tbody>
 </table>
 <%= paginate @items %>

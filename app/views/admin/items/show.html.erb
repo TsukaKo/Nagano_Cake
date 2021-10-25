@@ -1,0 +1,31 @@
+<div class="container px-8 px-sm-12">
+  <div class="row">
+    <div class="col">
+      <h5 class="bg-secondary d-inline px2">商品詳細</h5>
+    </div>
+    <div class="row">
+      <div class="col">
+        <%= attachment_image_tag @item, :image %>
+      </div>
+      <div class="col">
+        <h4>商品名</h4>
+        <a><%= @item.name %></a>
+        <h4>商品説明</h4>
+        <a><%= @item.introduction %></a>
+        <h4>ジャンル</h4>
+        <a><%= @item.genre_id %></a>
+        <h4>
+          税込価格</br>
+          (税抜価格)
+        </h4>
+        <a></a>
+        <h4>販売ステータス</h4>
+        <a><%= item.is_active %></a>
+        <%= link_to edit_admin_item_path(@item.id) do %>
+          <button type="button" class="btn btn-success">編集する</button>
+        <% end %>
+
+      </div>
+    </div>
+  </div>
+</div>

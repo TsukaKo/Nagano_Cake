@@ -11,7 +11,7 @@ class Admin::ItemsController < ApplicationController
   end
 
   def index
-    @items = Items.page(params[:page]).reverse_order
+    @items = Item.page(params[:page]).reverse_order
   end
 
   def show
@@ -31,5 +31,6 @@ class Admin::ItemsController < ApplicationController
   private
 
   def items_params
-    params.require(:items).permit(:name, :image_id, :introduction, :price, :is_active)
+    params.require(:items).permit(:name, :image, :introduction, :price, :is_active)
+  end
 end
