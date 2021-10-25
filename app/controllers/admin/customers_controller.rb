@@ -1,15 +1,21 @@
 class Admin::CustomersController < ApplicationController
-  
-  def index 
-  end 
-  
+
+  def index
+    @customers = Customer.page(params[:page]).reverse_order
+  end
+
   def show
-  end 
-  
-  def edit 
-  end 
-  
-  def update 
-  end 
-  
+    @customer = Customer.find(params[:id])
+  end
+
+  def edit
+    @customer = Customer.find(params[:id])
+  end
+
+  def update
+    @customer = Customer.find(params[:id])
+    @customer.update(customer_params)
+    redirect_to admin_customer_path
+  end
+
 end
