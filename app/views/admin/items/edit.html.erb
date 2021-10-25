@@ -1,16 +1,9 @@
-<main>
-  <div class="conteiner">
-    <div class="row">
-      <div class="col">
-　　　　<h5 class="bg-secondary d-inline p-2">
-          ジャンル編集
-        </h5>
-        <%= form_with model:@genre, url: admin_genres_path local:true do |f| %>
-          <label for="genreName">ジャンル名</label>
-          <%= f.text_field :name %>
-          <%= f.submit "変更を保存", class:"btn btn-success" %>
-        <% end %>
-      </div>
+<div class="container px-8 px-sm-12">
+  <div class="row">
+    <div class="col">
+      <h5 class="bg-secondary d-inline px2">商品編集</h5>
+      <%= form_with model:@item, url: admin_item_path(@item.id), local:true do |f| %>
+      
     </div>
   </div>
-</main>
+</div>
