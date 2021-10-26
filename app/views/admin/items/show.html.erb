@@ -18,6 +18,8 @@
           税込価格</br>
           (税抜価格)
         </h4>
+        <%= @item.price %>
+        <%= (@item.price * 1.1).floor %>
         <a></a>
         <h4>販売ステータス</h4>
         <a><%= item.is_active %></a>

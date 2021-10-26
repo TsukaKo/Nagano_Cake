@@ -1,0 +1,20 @@
+<h5 class="bg-secondary d-inline px2">会員一覧</h5>
+<table class="table" >
+  <tr>
+    <th scope="col">会員ID</th>
+    <th scope="col">氏名</th>
+    <th scope="col">メールアドレス</th>
+    <th scope="col">ステータス</th>
+  </tr>
+</table>
+
+<tbody>
+  <%= @customer.each do |customer| %>
+  <tr>
+    <td><%= customer.id %></td>
+    <%= link_to admin_customer_path(customer.id) do %>
+      <td><%= customer.name %></td>
+    <% end %>
+    <td><%= customer.</td>
+  </tr>
+</tbody>
