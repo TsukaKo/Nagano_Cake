@@ -17,24 +17,33 @@
        <h5>宛名</h5>
        <%= f.text_field :name %>
      </div>
+     <%= f.submit "新規登録", class:"btn btn-success" %>
+     <% end %>
+     <table class="table table-bordered">
+       <thead>
+         <tr>
+           <th scope="col">郵便番号</th>
+           <th scope="col" >住所</th>
+           <th scope="col">宛名</th>
+           <th scope="col"></th>
+         </tr>
+       </thead>
+       <tbody>
+        <% @addresses.each do |address| %>
+          <tr>
+            <td><%= address.postal_code %></td>
+            <td><%= address.address %></td>
+            <td><%= address.name %></td>
+            <td>
+              <%= link_to edit_address_path(address.id) do %>
+                <button type="button" class="btn btn-success">編集する</button>
+              <% end %>
+              <%= link_to "削除する" address_path class="btn btn-danger", method: :delete, "data-confirm" => "本当に削除しますか？" %>
+            </td>
+          </tr>
+        <% end %>
+       </tbody>
+     </table>
     </div>
   </div>
 </div>
-
-
-<h3 class="container px-8 px-sm-12 mx-auto">New book</h2>
-
-
-          <%= form_with model: book, local:true do |f| %>
-          <div class="form-group">
-            <div for="book_title">Title</div>
-            <%= f.text_field :title %>
-          </div>
-          <div class="form-group">
-            <div for="book_opinion">Opinion</div>
-            <%= f.text_area :body %>
-          </div>
-          <div class="form-group">
-            <%= f.submit 'Create Book' %>
-          </div>
-        <% end %>

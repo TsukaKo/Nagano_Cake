@@ -1,23 +1,27 @@
 <h5 class="bg-secondary d-inline px2">会員一覧</h5>
-<table class="table" >
-  <tr>
-    <th scope="col">会員ID</th>
-    <th scope="col">氏名</th>
-    <th scope="col">メールアドレス</th>
-    <th scope="col">ステータス</th>
-  </tr>
-</table>
 
-<tbody>
+<table class="table" >
+  <thead>
+    <tr>
+      <th scope="col">会員ID</th>
+      <th scope="col">氏名</th>
+      <th scope="col">メールアドレス</th>
+      <th scope="col">ステータス</th>
+    </tr>
+  </thead>
+
+
+  <tbody>
   <%= @customers.each do |customer| %>
-  <tr>
-    <td><%= customer.id %></td>
-    <%= link_to admin_customer_path(customer.id) do %>
-      <td><%= customer.name %></td>
-    <% end %>
-    <td><%= customer.email %></td>
-    <td><%= customer.is_active %></td>
-  </tr>
+    <tr>
+      <td><%= customer.id %></td>
+      <%= link_to admin_customer_path(customer.id) do %>
+        <td><%= customer.name %></td>
+      <% end %>
+      <td><%= customer.email %></td>
+      <td><%= customer.is_active %></td>
+    </tr>
   <% end %>
-</tbody>
+  </tbody>
+</table>
 <%= paginate @customers %>
