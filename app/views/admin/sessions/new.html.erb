@@ -1,10 +1,10 @@
-<div class="container px-8 px-sm-12">
+<div class="container px-8 px-sm-12-mx-auto">
   <div class="row">
 
    <div class="col">
      <h5 class="bg-secondary d-inline p-2">
       管理者ログイン
-    </h5>
+     </h5>
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="col-md-6 offset-md-3">
@@ -22,7 +22,7 @@
       <button type="button" class="btn btn-primary">Primary</button>
 
       <div class="actions">
-        <%= f.submit "Log in" %>
+        <%= f.submit "Log in",class:"btn btn-success" %>
       </div>
     <% end %>
 
