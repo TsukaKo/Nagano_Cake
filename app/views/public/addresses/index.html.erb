@@ -1,0 +1,40 @@
+<div class="container px-8 px-sm-12 mx-auto">
+  <div class="row">
+    <div class="col">
+      <h4 class="bg-secondary d-inline p-2">
+       　配送先登録/一覧
+     </h4>
+     <%= form_with model:@address, url: addresses_path, local:true do |f| %>
+     <div class="form-group">
+       <h5>郵便番号（ハイフンなし）</h5>
+       <%= f.text_field :postal_code %>
+     </div>
+     <div class="form-group">
+       <h5>住所</h5>
+       <%= f.text_field :address %>
+     </div>
+     <div class="form-group">
+       <h5>宛名</h5>
+       <%= f.text_field :name %>
+     </div>
+    </div>
+  </div>
+</div>
+
+
+<h3 class="container px-8 px-sm-12 mx-auto">New book</h2>
+
+
+          <%= form_with model: book, local:true do |f| %>
+          <div class="form-group">
+            <div for="book_title">Title</div>
+            <%= f.text_field :title %>
+          </div>
+          <div class="form-group">
+            <div for="book_opinion">Opinion</div>
+            <%= f.text_area :body %>
+          </div>
+          <div class="form-group">
+            <%= f.submit 'Create Book' %>
+          </div>
+        <% end %>
