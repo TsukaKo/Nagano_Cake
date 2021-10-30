@@ -2,8 +2,11 @@
   <div class="row">
 
    <div class="col">
-     <h5 class="bg-secondary d-inline p-2">
+     <h4 class="bg-secondary d-inline p-2">
       ログイン
+     </h4>
+     <h5 class="bg-secondary d-inline p-2">
+      会員の方はこちらからログイン
      </h5>
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -25,7 +28,10 @@
         <%= f.submit "ログイン",class:"btn btn-success" %>
       </div>
     <% end %>
-
+    <h5 class="bg-secondary d-inline px2">
+      会員登録がお済みでない方
+    </h5>
+    <%= link_to "こちら", _path %>から新規登録を行なって下さい。
    </div>
 
   </div>

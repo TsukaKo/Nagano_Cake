@@ -1,0 +1,16 @@
+<div class="container px-8 px-sm-12 mx-auto">
+  <div class="row">
+    <div class="col">
+      <h4 class="bg-secondary d-inline px2">配送先編集</h4>
+      <%= form_with model:@address, url:addresses_path, local:true do |f| %>
+      <h5>郵便番号（ハイフンなし）</h5>
+      <%= f.taxt_field :postal_code %>
+      <h5>住所</h5>
+      <%= f.taxt_field :address %>
+      <h5>宛名</h5>
+      <%= f.taxt_field :name %>
+      <%= f.submit "変更内容を保存", class:"btn btn-success" %>
+      <% end %>
+    </div>
+  </div>
+</div>
