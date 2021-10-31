@@ -1,4 +1,5 @@
 class Item < ApplicationRecord
   attachment :image
-  has_many :genres
+  belongs_to :genre
+  enum is_active_method: { "販売中": true, "販売停止中": false }
 end

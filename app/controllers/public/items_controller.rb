@@ -1,12 +1,13 @@
 class Public::ItemsController < ApplicationController
-  
+
   def index
     @items = Item.all
     @genres.all
-  end 
-  
+  end
+
   def show
     @item = Item.find(params[:id])
-  end 
-  
+    @cart_item = CartItem.new
+  end
+
 end
