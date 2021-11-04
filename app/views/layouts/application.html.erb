@@ -38,9 +38,7 @@
              <% end %>
            </li>
            <li class="nav-item">
-             <%= link_to destroy_admin_session_path　method: :delete do %>
-               <button type="button" class="btn btn-outline-dark">ログアウト</button>
-             <% end %>
+             <%= link_to "ログアウト",destroy_admin_session_path,method: :delete, class:"btn btn-outline-dark"  %>
            </li>
          </ul>
      </div>
