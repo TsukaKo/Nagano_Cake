@@ -11,7 +11,7 @@
         <h2><%= @item.name %></h2>
         <h4><%= @item.introduction %></h4>
         <h3>
-          ¥<%= (@item.price * 1.1).floor %>
+          ¥<%= cart_item.item.with_tax_price %>
           <h5>(税込)</h5>
         </h3>
         <%= form_with model:@cart_item, url:cart_items_path, local:true do |f| %>

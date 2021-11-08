@@ -5,6 +5,11 @@
     </div>
     <% @items.each do |f| %>
     <div class="col-md-4">
+      <%= link_to item_path(@item.id) do %>
+       <%= attachment_image_tag @item, :image, :fill, 20, 20, fallback: "no_image.jpg" %>
+      <% end %>
+      <%= f.item.name %>
+      <%= f.item.price %>
     </div>
     <% end %>
   </div>

@@ -8,6 +8,7 @@ class Customer < ApplicationRecord
       [first_name, last_name].join(' ')
     end
   has_many :addresses
+  has_many :cart_items
 
   def active_for_authentication?
     super && (self.is_active == false)
