@@ -1,10 +1,12 @@
 class Public::CartItemsController < ApplicationController
+  # before_action :authenticate_customer!
 
   def create
   end
 
   def index
-    @cart_items = current_customer.cart_items
+    binding.pry
+    @cart_items = current_customer
   end
 
   def update

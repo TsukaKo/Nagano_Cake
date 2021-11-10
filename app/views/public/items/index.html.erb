@@ -1,16 +1,17 @@
 <main>
-  <div class="container px-5 px-sm-0">
+  <div class="container px-5 px-sm-0 mx-auto">
     <div class="row">
-      <%= render 'items/genre', genres: @genres %>
-    </div>
-    <% @items.each do |f| %>
-    <div class="col-md-4">
-      <%= link_to item_path(@item.id) do %>
-       <%= attachment_image_tag @item, :image, :fill, 20, 20, fallback: "no_image.jpg" %>
+      <h3>商品一覧（全<%= @items.count %>件）</h3>
+      <% @items.each do |item| %>
+      <div class="col-lg-2">
+        <%= link_to item_path(item.id) do %>
+         <%= attachment_image_tag item, :image, format: 'jpeg', size: "100x100",  fallback: "no_image.jpg" %>
+        <% end %>
+        <div><%= item.name %></div>
+        <div>¥<%= item.price %></div>
+      </div>
       <% end %>
-      <%= f.item.name %>
-      <%= f.item.price %>
     </div>
-    <% end %>
+    <%= paginate @items %>
   </div>
 </main>

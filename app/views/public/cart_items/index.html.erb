@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col">
       <h4 class="bg-secondary d-inline p-2">
-       　ショッピングカート
+        ショッピングカート
       </h4>
       <%= link_to "カートを空にする", all_destroy_path, class:"btn btn-sm btn-danger", method: :delete  %>
       <table class="table table-bordered">
@@ -21,11 +21,11 @@
             <td><%= @item.name %></td>
             <td><%= @item.price %></td>
             <td>
-              <%= @cart_item.amount %>
-              <%= link_to "変更", cart_item_path(@cart_item.id), class="btn btn-success" %>
+              <%= cart_item.amount %>
+              <%#= link_to "変更", cart_item_path(cart_item.id), class="btn btn-success" %>
             </td>
             <td><%= cart_item.subtotal %></td>
-            <td><%= link_to "削除", cart_item_path(@cart_item.id), class:"btn btn-sm btn-danger", method: :delete  %></td>
+            <td><%= link_to "削除", cart_item_path(cart_item.id), class:"btn btn-sm btn-danger", method: :delete  %></td>
           </tr>
           <% end %>
         </tbody>
@@ -36,8 +36,8 @@
           <td><% @total +=  cart_item.subtotal %></td>
         </tr>
       </table>
-      <%= link_to "買い物を続ける", items_path, class="btn btn-primary" %>
-      <%= link_to "情報入力に進む", new_order_path, class="btn btn-primary" %>
+      <%#= link_to "買い物を続ける", items_path, class="btn btn-primary" %>
+      <%#= link_to "情報入力に進む", new_order_path, class="btn btn-primary" %>
 
     </div>
   </div>

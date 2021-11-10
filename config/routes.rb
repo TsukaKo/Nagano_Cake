@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   devise_for :customers, controllers: {
     sessions: 'customers/sessions',
     passwords: 'customers/passwords',
-    registrations: 'public/registrations'
+    registrations: 'customers/registrations'
   }
   devise_for :admins, controllers: {
     sessions: 'admin/sessions',
@@ -15,8 +15,6 @@ Rails.application.routes.draw do
 
   scope module: :public do
     resources :items, only:[:index, :show]
-    resources :registrations, only:[:new, :create]
-    resources :sessions, only:[:new, :create, :destroy]
     resources :customers, only:[:show, :edit, :update]
     get 'unsubsceibe' => 'customers#unsubsceibe'
     patch 'withdraw' => 'customers#withdraw'
