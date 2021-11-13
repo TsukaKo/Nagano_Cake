@@ -2,11 +2,12 @@ class Public::CartItemsController < ApplicationController
   # before_action :authenticate_customer!
 
   def create
+    hidden_fieldを
   end
 
   def index
-    binding.pry
-    @cart_items = current_customer
+    @cart_items = current_customer.cart_items
+    @sum = 0
   end
 
   def update

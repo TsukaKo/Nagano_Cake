@@ -2,7 +2,7 @@
   <div class="container px-5 px-sm-0">
     <div class="row">
       <div class="col-md-3">
-        <%= render 'items/genre', genres: @genres %>
+        <%#= render 'items/genre', genres: @genres %>
       </div>
       <div class="col-md-2 offset-md-1">
         <%= attachment_image_tag @item, :image, :fill, 20, 20, fallback: "no_image.jpg" %>
@@ -11,7 +11,7 @@
         <h2><%= @item.name %></h2>
         <h4><%= @item.introduction %></h4>
         <h3>
-          ¥<%= cart_item.item.with_tax_price %>
+          ¥<%= @item.price_add_tax %>
           <h5>(税込)</h5>
         </h3>
         <%= form_with model:@cart_item, url:cart_items_path, local:true do |f| %>
