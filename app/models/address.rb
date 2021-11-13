@@ -1,3 +1,4 @@
 class Address < ApplicationRecord
-  bolong_to :customer
+  belongs_to :customer
+  has_many :orders
 end
