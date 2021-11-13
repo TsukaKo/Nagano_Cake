@@ -2,7 +2,7 @@ class Public::CartItemsController < ApplicationController
   # before_action :authenticate_customer!
 
   def create
-    hidden_fieldを
+    @cart_item = 
   end
 
   def index
@@ -26,4 +26,8 @@ class Public::CartItemsController < ApplicationController
     current_customer.cart_items.destroy_all
   end
 
+  private
+  def cart_item_params
+    params.require(:cart_item).permit(:cart_item_id, :item_id, :amount, :customer_id, :created_at, :updated_at)
+  end
 end
