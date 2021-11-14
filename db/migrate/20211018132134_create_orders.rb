@@ -10,6 +10,7 @@ class CreateOrders < ActiveRecord::Migration[5.0]
       t.integer :billing_amount
       t.datetime :created_at
       t.datetime :updated_at
+      t.string :postal_code
       t.timestamps
     end
   end
