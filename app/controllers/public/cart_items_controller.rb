@@ -3,7 +3,7 @@ class Public::CartItemsController < ApplicationController
 
   def create
     @cart_item = CartItem.new(cart_item_params)
-    @cart_item.save
+    @cart_item.save!
     redirect_to cart_items_path
   end
 
@@ -26,6 +26,7 @@ class Public::CartItemsController < ApplicationController
 
   def all_destroy
     current_customer.cart_items.destroy_all
+    redirect_to cart_items_path
   end
 
   private

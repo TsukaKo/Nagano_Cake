@@ -1,0 +1,50 @@
+<div class="container px-8 px-sm-12 mx-auto">
+  <div class="row">
+    <div class="col">
+      <h4 class="bg-secondary d-inline p-2">注文情報確認</h4>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">商品名</th>
+            <th scope="col">単価(税込)</th>
+            <th scope="col">数量</th>
+            <th scope="col">小計</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @cart_item.each do |cart_item| %>
+          <tr>
+            <td><%= cart_item.item.name %></td>
+            <td><%= cart_item.item.price_add_tax %></td>
+            <td><%= cart_item.item.amount %></td>
+            <td><%= @sum %></td>
+          </tr>
+          <% @sum += cart_item.item.price_add_tax * cart_item.amount %>
+          <% end %>
+        </tbody>
+      </table>
+      <table class="table table-bordered">
+        <tr>
+          <th>送料</th>
+          <td><%= @order.postage %></td>
+          <th>商品合計</th>
+          <td><%= @sum %></td>
+          <th>請求金額</th>
+          <td><%= @order.postage+@sum %></td>
+        </tr>
+      </table>
+      <h3>支払方法</h3>
+      <p><%= @order.payment_method %></p>
+      <h3>お届け先</h3>
+      <p>
+        <%= @order.postal_code%>
+        <%= @order.address %></br>
+        <%= @order.first_name %>
+        <%= @order.last_name %>
+      </p>
+      <%= link_to edit_admin_item_path(@item.id) do %>
+        <button type="button" class="btn btn-success">編集する</button>
+      <% end %>
+    </div>
+  </div>
+</div>

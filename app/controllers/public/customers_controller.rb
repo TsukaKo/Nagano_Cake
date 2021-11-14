@@ -1,7 +1,7 @@
 class Public::CustomersController < ApplicationController
 
   def show
-    @customer = Cusutomer.find(params[:id])
+    @customer = Customer.find(params[:id])
   end
 
   def edit

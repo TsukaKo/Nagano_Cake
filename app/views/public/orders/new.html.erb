@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col">
       <h4 class="bg-secondary d-inline px2">注文情報入力</h4>
-      <%= form_with model:@order, url:orders_path, method: :post, local:true do |f| %>
+      <%= form_with model:@order, url:log_path, method: :post, local:true do |f| %>
       <h3>支払方法</h3>
       <%= f.radio_button :payment_method, "credit_card" %>
       <%= f.label :payment_method, "クレジットカード" %>
@@ -12,6 +12,13 @@
       <h5>
         <%= f.radio_button :address_method, "1" %>
         <%= f.label :address_method, "ご自身の住所", value: 1 %>
+        <h6>
+          <%= current_customer.postal_code %>
+          <%= current_customer.address %></br>
+          <%= current_customer.first_name %>
+          <%= current_customer.last_name %>
+        </h6>
+
       </h5>
       <h5>
         <%= f.radio_button :address_method, "2" %>

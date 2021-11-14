@@ -16,7 +16,6 @@
 <div class="container px-8 px-sm-12">
   <div class="row">
     <div class="col">
-      <% @genres.each do |genre| %>
       <table class="table">
        <thead>
          <tr>
@@ -25,6 +24,7 @@
          </tr>
        </thead>
        <tbody>
+         <% @genres.each do |genre| %>
          <tr>
            <td><%= genre.name %></td>
            <td>
@@ -33,9 +33,9 @@
              <% end %>
            </td>
          </tr>
+          <% end %>
        </tbody>
       </table>
-      <% end %>
     </div>
   </div>
 </div>

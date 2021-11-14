@@ -12,16 +12,23 @@
 
 
   <tbody>
-  <%= @customers.each do |customer| %>
+  　<%= @customers.each do |customer| %>
     <tr>
       <td><%= customer.id %></td>
-      <%= link_to admin_customer_path(customer.id) do %>
-        <td><%= customer.name %></td>
-      <% end %>
+      <td>
+        <%= link_to admin_customer_path(customer.id) do %>
+          <%= customer.name %>
+        <% end %>
+      </td>
       <td><%= customer.email %></td>
-      <td><%= customer.is_active %></td>
+      <td><% if customer.is_active == true %>
+            <p>有効</p>
+          <% else %>
+            <p>退会</p>
+          <% end %>
+      </td>
     </tr>
-  <% end %>
+  　<% end %>
   </tbody>
 </table>
 <%= paginate @customers %>
