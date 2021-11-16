@@ -17,30 +17,45 @@
              <button type="button" class="btn btn-outline-dark" >LOGO</button>
          </a>
          <ul class="nav justify-content-end">
+          <% if admin_signed_in? %>
            <li class="nav-item">
-             <%= link_to admin_items_path do %>
-               <button type="button" class="btn btn-outline-dark">商品一覧</button>
-             <% end %>
+             <%= link_to "商品一覧", admin_items_path, class:"btn btn-outline-dark" %>
            </li>
            <li class="nav-item">
-             <%= link_to admin_customers_path do %>
-               <button type="button" class="btn btn-outline-dark">会員一覧</button>
-             <% end %>
+             <%= link_to "会員一覧", admin_customers_path, class:"btn btn-outline-dark" %>
            </li>
            <li class="nav-item">
-             <%= link_to root_path do %>
-               <button type="button" class="btn btn-outline-dark">注文履歴一覧</button>
-             <% end %>
+             <%#= link_to "注文履歴一覧", _path, class:"btn btn-outline-dark" %>
            </li>
            <li class="nav-item">
-             <%= link_to admin_genres_path do %>
-               <button type="button" class="btn btn-outline-dark">ジャンル一覧</button>
-             <% end %>
+             <%= link_to "ジャンル一覧",  admin_genres_path, class:"btn btn-outline-dark" %>
            </li>
            <li class="nav-item">
-             <%= link_to "ログアウト",destroy_customer_session_path,method: :delete, class:"btn btn-outline-dark"  %>
+             <%= link_to "ログアウト", destroy_admin_session_path, method: :delete, class:"btn btn-outline-dark" %>
            </li>
-
+          <% elsif customer_signed_in? %>
+           <li class="nav-item">
+             <%= link_to "マイページ", customer_path(current_customer), class:"btn btn-outline-dark" %>
+           </li>
+           <li class="nav-item">
+             <%= link_to "商品一覧", items_path, class:"btn btn-outline-dark" %>
+           </li>
+           <li class="nav-item">
+             <%= link_to "カート", cart_items_path, class:"btn btn-outline-dark" %>
+           </li>
+           <li class="nav-item">
+             <%= link_to "ログアウト", destroy_customer_session_path, method: :delete, class:"btn btn-outline-dark" %>
+           </li>
+          <% else %>
+           <li class="nav-item">
+             <%= link_to "About", about_path, class:"btn btn-outline-dark" %>
+           </li>
+           <li class="nav-item">
+             <%= link_to "商品一覧", cart_items_path, class:"btn btn-outline-dark" %>
+           </li>
+           <li class="nav-item"></li>
+           <li class="nav-item"></li>
+          <% end %>
          </ul>
      </div>
    </nav>
