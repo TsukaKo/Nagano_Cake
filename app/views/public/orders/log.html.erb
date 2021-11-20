@@ -42,9 +42,7 @@
         <%= @order.first_name %>
         <%= @order.last_name %>
       </p>
-      <%= link_to edit_admin_item_path(@item.id) do %>
-        <button type="button" class="btn btn-success">編集する</button>
-      <% end %>
+      <%= link_to "編集する", edit_admin_item_path(@item.id), class:"btn btn-success" do %>
     </div>
   </div>
 </div>

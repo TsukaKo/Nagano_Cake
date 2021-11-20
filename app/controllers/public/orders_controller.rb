@@ -21,7 +21,6 @@ class Public::OrdersController < ApplicationController
   end
 
   def create
-    binding.pry
     @order = Order.new(order_params)
     cart_item = current_customer.cart_items.all
     @order.save
