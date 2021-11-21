@@ -16,9 +16,10 @@
           <tr>
             <td><%= cart_item.item.name %></td>
             <td><%= cart_item.item.price_add_tax %></td>
-            <td><%= cart_item.item.amount %></td>
-            <td><%= @sum %></td>
+            <td><%= cart_item.amount %></td>
+            <td><% cart_item.item.price_add_tax * cart_item.amount %></td>
           </tr>
+          <% @sum = 0 %>
           <% @sum += cart_item.item.price_add_tax * cart_item.amount %>
           <% end %>
         </tbody>
@@ -38,11 +39,10 @@
       <h3>お届け先</h3>
       <p>
         <%= @order.postal_code%>
-        <%= @order.address %></br>
-        <%= @order.first_name %>
-        <%= @order.last_name %>
+        <%= @order.addresses %></br>
+        <%= @order.name %>
       </p>
-      <%= link_to "編集する", edit_admin_item_path(@item.id), class:"btn btn-success" do %>
+      <%= link_to "注文を確定する", thanks_path, class:"btn btn-success"  %>
     </div>
   </div>
 </div>

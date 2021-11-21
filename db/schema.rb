@@ -103,6 +103,7 @@ ActiveRecord::Schema.define(version: 2021_11_03_113446) do
     t.integer "billing_amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "postal_code"
   end
 
 end

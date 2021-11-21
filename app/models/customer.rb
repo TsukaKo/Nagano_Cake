@@ -9,11 +9,13 @@ class Customer < ApplicationRecord
     end
   has_many :addresses
   has_many :cart_items
+  has_many :orders
   enum is_active_method: { "有効": true, "退会": false }
 
 
   def active_for_authentication?
     super && (self.is_active != false)
   end
+
 
 end

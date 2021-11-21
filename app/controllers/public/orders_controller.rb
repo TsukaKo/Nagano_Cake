@@ -5,15 +5,19 @@ class Public::OrdersController < ApplicationController
   end
 
   def log
+    @order = current_customer.orders.new
+    @order.postage = 800
+    @cart_item = current_customer.cart_items
     if params[:order][:address_method] == "1"
       @order.name = current_customer.first_name + current_customer.last_name
       @order.addresses = current_customer.address
       @order.postal_code = current_customer.postal_code
     elsif params[:order][:address_method] == "2"
-      @order.name = Order.address.find(params[:id])
-     #params[:order][:address_id].to_i その中にアドレスのidが入っている。それを元に住所を検索する。address.findを使う。引っ張ってきた情報を＠order.nameなどに代入する
-    elsif params[:order][:address_method].to_i == "3"
-
+      @order.name = Address.find(params[:order][:address_id])
+    elsif params[:order][:address_method] == "3"
+      @order.name = params[:order][:name]
+      @order.postal_code = params[:order][:postal_code]
+      @order.addresses = params[:order][:address]
     end
   end
 
@@ -38,9 +42,20 @@ class Public::OrdersController < ApplicationController
   end
 
   def index
+    @orders = Order.all
+    @order.postage = 800
+    @order.name = params[:order][:name]
+    @order.addresses = params[:order][:address]
+    @order.postal_code = params[:order][:postal_code]
+    @cart_item = current_customer.cart_items
   end
 
   def show
+  end
+
+  private
+  def order_params
+    params.require(:order).permit(:customer_id, :addresses, :name, :payment_method, :postage, :order_active, :billing_amount, :postal_code)
   end
 
 end
