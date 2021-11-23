@@ -6,6 +6,7 @@ class Public::OrdersController < ApplicationController
 
   def log
     @order = current_customer.orders.new
+    @order.payment_method = params[:order][:payment_method]
     @order.postage = 800
     @cart_item = current_customer.cart_items
     if params[:order][:address_method] == "1"
@@ -26,7 +27,8 @@ class Public::OrdersController < ApplicationController
 
   def create
     @order = Order.new(order_params)
-    cart_item = current_customer.cart_items.all
+    puts "==========="
+    p @order
     @order.save
     current_customer.cart_items.each do |cart_item|
       order_detail = OrderDetail.new
@@ -37,7 +39,7 @@ class Public::OrdersController < ApplicationController
       order_detail.making_status = "no_running"
       order_detail.save
     end
-    cart_item.all_destroy
+    current_customer.cart_items.destroy_all
     redirect_to thanks_path
   end
 
