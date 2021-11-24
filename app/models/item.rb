@@ -1,6 +1,7 @@
 class Item < ApplicationRecord
   attachment :image
   belongs_to :genre
+  has_many :order_details
   enum is_active_method: { "販売中": true, "販売停止中": false }
   has_many :cart_items
   def price_add_tax

@@ -22126,3 +22126,1096 @@ Processing by Public::ItemsController#index as HTML
 Completed 200 OK in 168ms (Views: 154.8ms | ActiveRecord: 7.2ms)
 
 
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/Nagano_Cake/app/models/application_record.rb:1)
+Started GET "/" for 39.2.202.225 at 2021-11-23 08:23:32 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" ASC LIMIT ?[0m  [["LIMIT", 4]]
+  Rendered public/homes/top.html.erb within layouts/application (275.0ms)
+Completed 200 OK in 560ms (Views: 544.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 39.2.202.225 at 2021-11-23 08:23:35 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" ASC LIMIT ?[0m  [["LIMIT", 4]]
+  Rendered public/homes/top.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 106ms (Views: 105.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 39.2.202.225 at 2021-11-23 08:23:36 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" ASC LIMIT ?[0m  [["LIMIT", 4]]
+  Rendered public/homes/top.html.erb within layouts/application (4.4ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 183ms (Views: 180.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/customers/1" for 39.2.202.225 at 2021-11-23 08:23:38 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering public/customers/show.html.erb within layouts/application
+  Rendered public/customers/show.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/Nagano_Cake/app/views/public/customers/show.html.erb:12: syntax error, unexpected ')', expecting '='
+...irt_name_kana, last_name_kana );@output_buffer.safe_append='...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/public/customers/show.html.erb:30: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/ec2-user/environment/Nagano_Cake/app/views/public/customers/show.html.erb:32: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/public/customers/show.html.erb:12: syntax error, unexpected ')', expecting '='
+app/views/public/customers/show.html.erb:30: syntax error, unexpected ensure, expecting ')'
+app/views/public/customers/show.html.erb:32: syntax error, unexpected end, expecting ')'
+Started GET "/customers/1" for 39.2.202.225 at 2021-11-23 08:24:32 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering public/customers/show.html.erb within layouts/application
+  Rendered public/customers/show.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/Nagano_Cake/app/views/public/customers/show.html.erb:12: syntax error, unexpected ')', expecting '='
+...rst_name_kana, last_name_kana );@output_buffer.safe_append='...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/public/customers/show.html.erb:30: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/ec2-user/environment/Nagano_Cake/app/views/public/customers/show.html.erb:32: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/public/customers/show.html.erb:12: syntax error, unexpected ')', expecting '='
+app/views/public/customers/show.html.erb:30: syntax error, unexpected ensure, expecting ')'
+app/views/public/customers/show.html.erb:32: syntax error, unexpected end, expecting ')'
+Started GET "/customers/1" for 39.2.202.225 at 2021-11-23 08:25:59 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering public/customers/show.html.erb within layouts/application
+  Rendered public/customers/show.html.erb within layouts/application (1.5ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 123ms (Views: 120.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/orders" for 39.2.202.225 at 2021-11-23 08:26:06 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::OrdersController#index as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `postage=' for nil:NilClass):
+  
+app/controllers/public/orders_controller.rb:48:in `index'
+Started GET "/orders" for 39.2.202.225 at 2021-11-23 08:26:59 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::OrdersController#index as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/public/orders_controller.rb:48:in `index'
+Started GET "/orders" for 39.2.202.225 at 2021-11-23 08:27:37 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::OrdersController#index as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/public/orders_controller.rb:49:in `index'
+Started GET "/orders" for 39.2.202.225 at 2021-11-23 08:27:56 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::OrdersController#index as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering public/orders/index.html.erb within layouts/application
+  Rendered public/orders/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.8ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/Nagano_Cake/app/views/public/orders/index.html.erb:28: syntax error, unexpected '='
+...", order_path(order.id), class="btn btn-success" );@output_b...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/public/orders/index.html.erb:38: syntax error, unexpected end-of-input, expecting end):
+  
+app/views/public/orders/index.html.erb:28: syntax error, unexpected '='
+app/views/public/orders/index.html.erb:38: syntax error, unexpected end-of-input, expecting end
+Started GET "/orders" for 39.2.202.225 at 2021-11-23 08:28:34 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::OrdersController#index as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering public/orders/index.html.erb within layouts/application
+  Rendered public/orders/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/Nagano_Cake/app/views/public/orders/index.html.erb:38: syntax error, unexpected end-of-input, expecting end):
+  
+app/views/public/orders/index.html.erb:38: syntax error, unexpected end-of-input, expecting end
+Started GET "/orders" for 39.2.202.225 at 2021-11-23 08:29:20 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::OrdersController#index as HTML
+  Rendering public/orders/index.html.erb within layouts/application
+  Rendered public/orders/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/Nagano_Cake/app/views/public/orders/index.html.erb:38: syntax error, unexpected end-of-input, expecting end):
+  
+app/views/public/orders/index.html.erb:38: syntax error, unexpected end-of-input, expecting end
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/Nagano_Cake/app/models/application_record.rb:1)
+Started GET "/" for 39.2.202.225 at 2021-11-23 08:29:51 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" ASC LIMIT ?[0m  [["LIMIT", 4]]
+  Rendered public/homes/top.html.erb within layouts/application (263.4ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 568ms (Views: 555.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/customers/1" for 39.2.202.225 at 2021-11-23 08:29:53 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering public/customers/show.html.erb within layouts/application
+  Rendered public/customers/show.html.erb within layouts/application (0.9ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 147ms (Views: 144.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/orders" for 39.2.202.225 at 2021-11-23 08:29:56 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::OrdersController#index as HTML
+  Rendering public/orders/index.html.erb within layouts/application
+  Rendered public/orders/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/Nagano_Cake/app/views/public/orders/index.html.erb:38: syntax error, unexpected end-of-input, expecting end):
+  
+app/views/public/orders/index.html.erb:38: syntax error, unexpected end-of-input, expecting end
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/Nagano_Cake/app/models/application_record.rb:1)
+Started GET "/" for 39.2.202.225 at 2021-11-23 08:54:57 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" ASC LIMIT ?[0m  [["LIMIT", 4]]
+  Rendered public/homes/top.html.erb within layouts/application (260.9ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 646ms (Views: 633.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/cart_items" for 39.2.202.225 at 2021-11-23 08:55:00 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CartItemsController#index as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering public/cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered public/cart_items/index.html.erb within layouts/application (573.0ms)
+Completed 200 OK in 686ms (Views: 674.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/customers/1" for 39.2.202.225 at 2021-11-23 08:55:02 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering public/customers/show.html.erb within layouts/application
+  Rendered public/customers/show.html.erb within layouts/application (1.1ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 148ms (Views: 144.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/orders" for 39.2.202.225 at 2021-11-23 08:55:04 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::OrdersController#index as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering public/orders/index.html.erb within layouts/application
+  Rendered public/orders/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/Nagano_Cake/app/views/public/orders/index.html.erb:38: syntax error, unexpected end-of-input, expecting end):
+  
+app/views/public/orders/index.html.erb:38: syntax error, unexpected end-of-input, expecting end
+Started GET "/orders" for 39.2.202.225 at 2021-11-23 08:55:51 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::OrdersController#index as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering public/orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."customer_id" = ?[0m  [["customer_id", 1]]
+  Rendered public/orders/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 127ms (Views: 122.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cart_items" for 39.2.202.225 at 2021-11-23 08:56:04 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CartItemsController#index as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering public/cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered public/cart_items/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 128ms (Views: 124.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/orders/new" for 39.2.202.225 at 2021-11-23 08:56:06 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::OrdersController#new as HTML
+  Rendering public/orders/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  Rendered public/orders/new.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 158ms (Views: 146.5ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/log" for 39.2.202.225 at 2021-11-23 08:56:10 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::OrdersController#log as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"htk0fDMHuX+BDeMgQs32Cv2lnBaGq7+RuIG/wW6iEoSttz/0f75BLiasIaA46E1lPZpO5DsWDeqSy9bkA1jA3Q==", "order"=>{"payment_method"=>"credit_card", "address_method"=>"1", "address_id"=>"2", "postal_code"=>"", "address"=>"", "name"=>""}, "commit"=>"確認画面へ進む"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering public/orders/log.html.erb within layouts/application
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered public/orders/log.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 189ms (Views: 185.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/orders" for 39.2.202.225 at 2021-11-23 08:56:11 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"am7CC1K1Y4aDqvRbw2PSUyPGha+305eNWK//L8IorOWKwDJNt1YXs/va2mBqFYgy+9tWBzbgLNQJwO3qfvKFQA==", "commit"=>"注文を確定する", "order"=>{"postage"=>"800", "billing_amount"=>"1680", "payment_method"=>"credit_card", "postal_code"=>"1230000", "addresses"=>"神奈川県横浜市3", "name"=>"坂本拓"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCartItem Destroy (2.7ms)[0m  [1m[31mDELETE FROM "cart_items" WHERE "cart_items"."id" = ?[0m  [["id", 25]]
+  [1m[36mCartItem Destroy (0.1ms)[0m  [1m[31mDELETE FROM "cart_items" WHERE "cart_items"."id" = ?[0m  [["id", 26]]
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://988bd93e29bc4baaa06b294c6c72dc7d.vfs.cloud9.us-east-1.amazonaws.com/thanks
+Completed 302 Found in 42ms (ActiveRecord: 7.7ms)
+
+
+Started GET "/thanks" for 39.2.202.225 at 2021-11-23 08:56:12 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::OrdersController#thanks as HTML
+  Rendering public/orders/thanks.html.erb within layouts/application
+  Rendered public/orders/thanks.html.erb within layouts/application (0.4ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 109ms (Views: 107.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cart_items" for 39.2.202.225 at 2021-11-23 09:08:19 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CartItemsController#index as HTML
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering public/cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  Rendered public/cart_items/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 189ms (Views: 159.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/items" for 39.2.202.225 at 2021-11-23 09:08:22 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::ItemsController#index as HTML
+  Rendering public/items/index.html.erb within layouts/application
+  [1m[35m (22.1ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  Rendered public/items/index.html.erb within layouts/application (143.6ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 269ms (Views: 230.6ms | ActiveRecord: 23.2ms)
+
+
+Started GET "/items/3" for 39.2.202.225 at 2021-11-23 09:08:24 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::ItemsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering public/items/show.html.erb within layouts/application
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered public/items/show.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 136ms (Views: 126.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/cart_items" for 39.2.202.225 at 2021-11-23 09:08:26 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CartItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3BkkP49DA/0q52IeLlzAtYMjhJJxAxmFceLE0cpwCVyfFZZxue85GJUxQVrgN2oEmrVCMDuRosHGDqBAafRtiA==", "cart_item"=>{"item_id"=>"3", "customer_id"=>"1", "amount"=>"1"}, "commit"=>"カートに入れる"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCartItem Create (3.5ms)[0m  [1m[32mINSERT INTO "cart_items" ("item_id", "customer_id", "amount", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["item_id", 3], ["customer_id", 1], ["amount", 1], ["created_at", "2021-11-23 09:08:26.161490"], ["updated_at", "2021-11-23 09:08:26.161490"]]
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://988bd93e29bc4baaa06b294c6c72dc7d.vfs.cloud9.us-east-1.amazonaws.com/cart_items
+Completed 302 Found in 19ms (ActiveRecord: 7.6ms)
+
+
+Started GET "/cart_items" for 39.2.202.225 at 2021-11-23 09:08:26 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CartItemsController#index as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering public/cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered public/cart_items/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 129ms (Views: 126.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/orders/new" for 39.2.202.225 at 2021-11-23 09:08:27 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::OrdersController#new as HTML
+  Rendering public/orders/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  Rendered public/orders/new.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 145ms (Views: 129.8ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/log" for 39.2.202.225 at 2021-11-23 09:08:32 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::OrdersController#log as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RU2y/zzi3mi5QuOgJvT9et9S4VTE/riNT7AfxsWUW3xuI7l3cFsmOR7jISBc0UYVH20zpnlDCvZl+nbjqG6JJQ==", "order"=>{"payment_method"=>"credit_card", "address_method"=>"1", "address_id"=>"2", "postal_code"=>"", "address"=>"", "name"=>""}, "commit"=>"確認画面へ進む"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering public/orders/log.html.erb within layouts/application
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered public/orders/log.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 205ms (Views: 196.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/orders" for 39.2.202.225 at 2021-11-23 09:08:34 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J5DJxmALqiXepszx8b8b5xsin2Mi0xj9HKa1Pr9ydcnHPjmAhejeEKbW4spYyUGGwz9My6Pgo6RNyaf7A6hcbA==", "commit"=>"注文を確定する", "order"=>{"postage"=>"800", "billing_amount"=>"1350", "payment_method"=>"credit_card", "postal_code"=>"1230000", "addresses"=>"神奈川県横浜市3", "name"=>"坂本拓"}}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCartItem Destroy (3.1ms)[0m  [1m[31mDELETE FROM "cart_items" WHERE "cart_items"."id" = ?[0m  [["id", 27]]
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://988bd93e29bc4baaa06b294c6c72dc7d.vfs.cloud9.us-east-1.amazonaws.com/thanks
+Completed 302 Found in 53ms (ActiveRecord: 8.8ms)
+
+
+Started GET "/thanks" for 39.2.202.225 at 2021-11-23 09:08:34 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::OrdersController#thanks as HTML
+  Rendering public/orders/thanks.html.erb within layouts/application
+  Rendered public/orders/thanks.html.erb within layouts/application (0.4ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 140ms (Views: 136.5ms | ActiveRecord: 0.1ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/Nagano_Cake/app/models/application_record.rb:1)
+Started GET "/" for 39.2.202.225 at 2021-11-23 09:12:14 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" ASC LIMIT ?[0m  [["LIMIT", 4]]
+  Rendered public/homes/top.html.erb within layouts/application (262.2ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 633ms (Views: 616.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/items" for 39.2.202.225 at 2021-11-23 09:12:18 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::ItemsController#index as HTML
+  Rendering public/items/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  Rendered public/items/index.html.erb within layouts/application (537.3ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 643ms (Views: 641.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/items/2" for 39.2.202.225 at 2021-11-23 09:12:20 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::ItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering public/items/show.html.erb within layouts/application
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered public/items/show.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 137ms (Views: 126.0ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/cart_items" for 39.2.202.225 at 2021-11-23 09:12:22 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CartItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X6UDkvQGWgbLzLmCmqOyur7+9vJHMsImagpSodO88f4cqbHcwqpg43QamsZUyBgLp2gwUA2geWLd5jYwcDiVKg==", "cart_item"=>{"item_id"=>"2", "customer_id"=>"1", "amount"=>"1"}, "commit"=>"カートに入れる"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCartItem Create (3.0ms)[0m  [1m[32mINSERT INTO "cart_items" ("item_id", "customer_id", "amount", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["item_id", 2], ["customer_id", 1], ["amount", 1], ["created_at", "2021-11-23 09:12:22.747765"], ["updated_at", "2021-11-23 09:12:22.747765"]]
+  [1m[35m (6.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://988bd93e29bc4baaa06b294c6c72dc7d.vfs.cloud9.us-east-1.amazonaws.com/cart_items
+Completed 302 Found in 29ms (ActiveRecord: 10.0ms)
+
+
+Started GET "/cart_items" for 39.2.202.225 at 2021-11-23 09:12:22 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CartItemsController#index as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering public/cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (0.2ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered public/cart_items/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 119ms (Views: 109.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/orders/new" for 39.2.202.225 at 2021-11-23 09:12:24 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::OrdersController#new as HTML
+  Rendering public/orders/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  Rendered public/orders/new.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 137ms (Views: 124.0ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/log" for 39.2.202.225 at 2021-11-23 09:12:28 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::OrdersController#log as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aFOfwRaySfxwWceOpYU2rWLKeymZnQVz8wh/Og23ScJDPZRJWguxrdf4BQ7foI3CovWp2yQgtwjZQhYfYE2bmw==", "order"=>{"payment_method"=>"credit_card", "address_method"=>"1", "address_id"=>"2", "postal_code"=>"", "address"=>"", "name"=>""}, "commit"=>"確認画面へ進む"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering public/orders/log.html.erb within layouts/application
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered public/orders/log.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 122ms (Views: 116.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/orders" for 39.2.202.225 at 2021-11-23 09:12:30 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yjc7j5WQacT7mqA/0TbOYTlWONqPnnjKG3g+UibS5HsqmcvJcHMd8YPqjgR4QJQA4Uvrcg6tw5NKFyyXmgjN3g==", "commit"=>"注文を確定する", "order"=>{"postage"=>"800", "billing_amount"=>"1130", "payment_method"=>"credit_card", "postal_code"=>"1230000", "addresses"=>"神奈川県横浜市3", "name"=>"坂本拓"}}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrder Create (2.1ms)[0m  [1m[32mINSERT INTO "orders" ("customer_id", "addresses", "name", "payment_method", "postage", "billing_amount", "created_at", "updated_at", "postal_code") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["customer_id", 1], ["addresses", "神奈川県横浜市3"], ["name", "坂本拓"], ["payment_method", 0], ["postage", 800], ["billing_amount", 1130], ["created_at", "2021-11-23 09:12:30.334012"], ["updated_at", "2021-11-23 09:12:30.334012"], ["postal_code", "1230000"]]
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrderDetail Create (4.0ms)[0m  [1m[32mINSERT INTO "order_details" ("order_id", "item_id", "price", "amount", "making_status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["order_id", 1], ["item_id", 2], ["price", 300], ["amount", 1], ["making_status", 0], ["created_at", "2021-11-23 09:12:30.359017"], ["updated_at", "2021-11-23 09:12:30.359017"]]
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCartItem Destroy (0.1ms)[0m  [1m[31mDELETE FROM "cart_items" WHERE "cart_items"."id" = ?[0m  [["id", 28]]
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://988bd93e29bc4baaa06b294c6c72dc7d.vfs.cloud9.us-east-1.amazonaws.com/thanks
+Completed 302 Found in 50ms (ActiveRecord: 19.9ms)
+
+
+Started GET "/thanks" for 39.2.202.225 at 2021-11-23 09:12:30 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::OrdersController#thanks as HTML
+  Rendering public/orders/thanks.html.erb within layouts/application
+  Rendered public/orders/thanks.html.erb within layouts/application (0.3ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 103ms (Views: 101.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/customers/1" for 39.2.202.225 at 2021-11-23 09:13:50 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering public/customers/show.html.erb within layouts/application
+  Rendered public/customers/show.html.erb within layouts/application (0.9ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 120ms (Views: 115.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/orders" for 39.2.202.225 at 2021-11-23 09:13:52 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::OrdersController#index as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering public/orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."customer_id" = ?[0m  [["customer_id", 1]]
+  Rendered public/orders/index.html.erb within layouts/application (12.0ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `address' for #<Order:0x00007f2a55bf1950>
+Did you mean?  addresses):
+    19:             <td><%= order.created_at %></td>
+    20:             <td>
+    21:               "〒"<%= order.postal_code %>
+    22:               <%= order.address %>
+    23:               <%= order.name %>
+    24:             </td>
+    25:             <td><%= order.order_details.item.name %></td>
+  
+app/views/public/orders/index.html.erb:22:in `block in _app_views_public_orders_index_html_erb___3397994877968334212_69909901909820'
+app/views/public/orders/index.html.erb:17:in `_app_views_public_orders_index_html_erb___3397994877968334212_69909901909820'
+Started GET "/orders" for 39.2.202.225 at 2021-11-23 09:14:43 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::OrdersController#index as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering public/orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."customer_id" = ?[0m  [["customer_id", 1]]
+  [1m[36mOrderDetail Load (0.2ms)[0m  [1m[34mSELECT  "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ? LIMIT ?[0m  [["order_id", 1], ["LIMIT", 11]]
+  Rendered public/orders/index.html.erb within layouts/application (7.6ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `item' for #<OrderDetail::ActiveRecord_Associations_CollectionProxy:0x00007f2a5545c3c0>):
+    22:               <%= order.addresses %>
+    23:               <%= order.name %>
+    24:             </td>
+    25:             <td><%= order.order_details.item.name %></td>
+    26:             <td><%= order.billing_amount %></td>
+    27:             <td><%=%></td>
+    28:             <td><%= link_to "表示する", order_path(order.id), class:"btn btn-success" %></td>
+  
+app/views/public/orders/index.html.erb:25:in `block in _app_views_public_orders_index_html_erb___3397994877968334212_69909897749440'
+app/views/public/orders/index.html.erb:17:in `_app_views_public_orders_index_html_erb___3397994877968334212_69909897749440'
+Started GET "/orders" for 39.2.202.225 at 2021-11-23 09:21:58 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::OrdersController#index as HTML
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering public/orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."customer_id" = ?[0m  [["customer_id", 1]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  Rendered public/orders/index.html.erb within layouts/application (13.5ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `item' for #<OrderDetail:0x00007f2a5ca1be30>
+Did you mean?  item_id):
+    23:               <%= order.name %>
+    24:             </td>
+    25:             <% order.order_details.each do |order_detail| %>
+    26:             <td><%= order_detail.item.name %></td>
+    27:             <% end %>
+    28:             <td><%= order.billing_amount %></td>
+    29:             <td><%=%></td>
+  
+app/views/public/orders/index.html.erb:26:in `block (2 levels) in _app_views_public_orders_index_html_erb___3397994877968334212_69909959595920'
+app/views/public/orders/index.html.erb:25:in `block in _app_views_public_orders_index_html_erb___3397994877968334212_69909959595920'
+app/views/public/orders/index.html.erb:17:in `_app_views_public_orders_index_html_erb___3397994877968334212_69909959595920'
+Started GET "/orders" for 39.2.202.225 at 2021-11-23 09:22:14 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::OrdersController#index as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering public/orders/index.html.erb within layouts/application
+  Rendered public/orders/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/Nagano_Cake/app/views/public/orders/index.html.erb:26: syntax error, unexpected tIVAR
+...fer.append=( order_detail.@item.name );@output_buffer.safe_a...
+...                          ^~~~~):
+  
+app/views/public/orders/index.html.erb:26: syntax error, unexpected tIVAR
+Started GET "/orders" for 39.2.202.225 at 2021-11-23 09:24:20 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::OrdersController#index as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering public/orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."customer_id" = ?[0m  [["customer_id", 1]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered public/orders/index.html.erb within layouts/application (39.1ms)
+Completed 200 OK in 177ms (Views: 141.0ms | ActiveRecord: 2.7ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/Nagano_Cake/app/models/application_record.rb:1)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/Nagano_Cake/app/models/application_record.rb:1)
+Started GET "/" for 39.2.202.225 at 2021-11-23 10:56:34 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" ASC LIMIT ?[0m  [["LIMIT", 4]]
+  Rendered public/homes/top.html.erb within layouts/application (267.6ms)
+Completed 200 OK in 597ms (Views: 576.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 39.2.202.225 at 2021-11-23 10:56:37 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" ASC LIMIT ?[0m  [["LIMIT", 4]]
+  Rendered public/homes/top.html.erb within layouts/application (4.4ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 123ms (Views: 120.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/customers/1" for 39.2.202.225 at 2021-11-23 10:56:41 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering public/customers/show.html.erb within layouts/application
+  Rendered public/customers/show.html.erb within layouts/application (1.0ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 139ms (Views: 134.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/orders" for 39.2.202.225 at 2021-11-23 10:56:43 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::OrdersController#index as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering public/orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."customer_id" = ?[0m  [["customer_id", 1]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered public/orders/index.html.erb within layouts/application (58.5ms)
+Completed 200 OK in 223ms (Views: 197.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/orders/1" for 39.2.202.225 at 2021-11-23 10:56:45 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `order' for #<Customer:0x00007fdff836c3a8>
+Did you mean?  orders
+               orders=):
+  
+app/controllers/public/orders_controller.rb:52:in `show'
+Started GET "/orders/1" for 39.2.202.225 at 2021-11-23 10:57:19 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.8ms)
+
+
+  
+NoMethodError (undefined method `order' for #<Customer:0x00007fdff1ebc200>
+Did you mean?  orders
+               orders=):
+  
+app/controllers/public/orders_controller.rb:52:in `show'
+Started GET "/orders/1" for 39.2.202.225 at 2021-11-23 11:14:23 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."customer_id" = ? AND "orders"."id" = ? LIMIT ?[0m  [["customer_id", 1], ["id", 1], ["LIMIT", 1]]
+  Rendering public/orders/show.html.erb within layouts/application
+  Rendered public/orders/show.html.erb within layouts/application (491.9ms)
+Completed 500 Internal Server Error in 535ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    49:           </tr>
+    50:         </thead>
+    51:         <tbody>
+    52:           <% @orders.each do |order| %>
+    53:           <tr>
+    54:             <% order.order_details.each do |order_detail| %>
+    55:             <td><%= order_detail.item.name %></td>
+  
+app/views/public/orders/show.html.erb:52:in `_app_views_public_orders_show_html_erb__1435630889385728926_70299903708880'
+Started GET "/orders/1" for 39.2.202.225 at 2021-11-23 11:18:17 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."customer_id" = ? AND "orders"."id" = ? LIMIT ?[0m  [["customer_id", 1], ["id", 1], ["LIMIT", 1]]
+  Rendering public/orders/show.html.erb within layouts/application
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered public/orders/show.html.erb within layouts/application (32.0ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `amount' for #<Item:0x00007fdff407b198>):
+    53:           <tr>
+    54:             <td><%= order_detail.item.name %></td>
+    55:             <td><%= order_detail.item.price_add_tax %></td>
+    56:             <td><%= order_detail.item.amount %></td>
+    57:             <td><%= order_detail.item.price_add_tax * order_detail.item.amount %></td>
+    58:           </tr>
+    59:           <% end %>
+  
+app/views/public/orders/show.html.erb:56:in `block in _app_views_public_orders_show_html_erb__1435630889385728926_70299959573540'
+app/views/public/orders/show.html.erb:52:in `_app_views_public_orders_show_html_erb__1435630889385728926_70299959573540'
+Started GET "/orders/1" for 39.2.202.225 at 2021-11-23 11:19:10 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."customer_id" = ? AND "orders"."id" = ? LIMIT ?[0m  [["customer_id", 1], ["id", 1], ["LIMIT", 1]]
+  Rendering public/orders/show.html.erb within layouts/application
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered public/orders/show.html.erb within layouts/application (10.1ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `amount' for #<Item:0x00007fdff8252f58>):
+    54:             <td><%= order_detail.item.name %></td>
+    55:             <td><%= order_detail.item.price_add_tax %></td>
+    56:             <td><%= order_detail.amount %></td>
+    57:             <td><%= order_detail.item.price_add_tax * order_detail.item.amount %></td>
+    58:           </tr>
+    59:           <% end %>
+    60:         </tbody>
+  
+app/views/public/orders/show.html.erb:57:in `block in _app_views_public_orders_show_html_erb__1435630889385728926_70299958714460'
+app/views/public/orders/show.html.erb:52:in `_app_views_public_orders_show_html_erb__1435630889385728926_70299958714460'
+Started GET "/orders/1" for 39.2.202.225 at 2021-11-23 11:19:30 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."customer_id" = ? AND "orders"."id" = ? LIMIT ?[0m  [["customer_id", 1], ["id", 1], ["LIMIT", 1]]
+  Rendering public/orders/show.html.erb within layouts/application
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered public/orders/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 145ms (Views: 138.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/orders/1" for 39.2.202.225 at 2021-11-23 11:24:42 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."customer_id" = ? AND "orders"."id" = ? LIMIT ?[0m  [["customer_id", 1], ["id", 1], ["LIMIT", 1]]
+  Rendering public/orders/show.html.erb within layouts/application
+  [1m[36mOrderDetail Load (0.2ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered public/orders/show.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 152ms (Views: 145.1ms | ActiveRecord: 0.6ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/Nagano_Cake/app/models/application_record.rb:1)
+Started GET "/" for 39.2.202.225 at 2021-11-23 12:28:56 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" ASC LIMIT ?[0m  [["LIMIT", 4]]
+  Rendered public/homes/top.html.erb within layouts/application (312.1ms)
+Completed 200 OK in 565ms (Views: 549.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 39.2.202.225 at 2021-11-23 12:28:57 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" ASC LIMIT ?[0m  [["LIMIT", 4]]
+  Rendered public/homes/top.html.erb within layouts/application (3.3ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 77ms (Views: 75.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/cart_items" for 39.2.202.225 at 2021-11-23 12:29:00 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CartItemsController#index as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering public/cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  Rendered public/cart_items/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 87ms (Views: 73.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/items" for 39.2.202.225 at 2021-11-23 12:29:02 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::ItemsController#index as HTML
+  Rendering public/items/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  Rendered public/items/index.html.erb within layouts/application (573.2ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 646ms (Views: 643.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/items/6" for 39.2.202.225 at 2021-11-23 12:29:05 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::ItemsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering public/items/show.html.erb within layouts/application
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered public/items/show.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 88ms (Views: 79.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/items" for 39.2.202.225 at 2021-11-23 12:29:08 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::ItemsController#index as HTML
+  Rendering public/items/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  Rendered public/items/index.html.erb within layouts/application (11.5ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 67.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/items/4" for 39.2.202.225 at 2021-11-23 12:29:10 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::ItemsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering public/items/show.html.erb within layouts/application
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered public/items/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 74ms (Views: 71.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/cart_items" for 39.2.202.225 at 2021-11-23 12:29:11 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CartItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7VS+uIi6kUvSPjQQbfg3J2/oePFpNhh3LP7WVibtWnmuWAz2vharrm3oF1Sjk52Wdn6+UyOkozObErLHhWk+rQ==", "cart_item"=>{"item_id"=>"4", "customer_id"=>"1", "amount"=>"1"}, "commit"=>"カートに入れる"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCartItem Create (1.3ms)[0m  [1m[32mINSERT INTO "cart_items" ("item_id", "customer_id", "amount", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["item_id", 4], ["customer_id", 1], ["amount", 1], ["created_at", "2021-11-23 12:29:11.979986"], ["updated_at", "2021-11-23 12:29:11.979986"]]
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://988bd93e29bc4baaa06b294c6c72dc7d.vfs.cloud9.us-east-1.amazonaws.com/cart_items
+Completed 302 Found in 21ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/cart_items" for 39.2.202.225 at 2021-11-23 12:29:12 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CartItemsController#index as HTML
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering public/cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered public/cart_items/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 73ms (Views: 70.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/orders/new" for 39.2.202.225 at 2021-11-23 12:29:21 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::OrdersController#new as HTML
+  Rendering public/orders/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  Rendered public/orders/new.html.erb within layouts/application (30.4ms)
+Completed 200 OK in 101ms (Views: 87.5ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/log" for 39.2.202.225 at 2021-11-23 12:29:26 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::OrdersController#log as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fMlAabGu3cMJdNuCOQtr/Q5+akhJdNc5d3UKgUmDXXlXp0vh/Rclkq7VGQJDLtCSzkG4uvTJZUJdP2OkJHmPIA==", "order"=>{"payment_method"=>"credit_card", "address_method"=>"1", "address_id"=>"2", "postal_code"=>"", "address"=>"", "name"=>""}, "commit"=>"確認画面へ進む"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering public/orders/log.html.erb within layouts/application
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered public/orders/log.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 77ms (Views: 72.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/orders" for 39.2.202.225 at 2021-11-23 12:29:29 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PRIeQ74WrHHy/ZMT92OHD8cU+nw6xW1AHbw/BC+fOYzdvO4FW/XYRIqNvSheFd1uHwkp1Lv21hlM0y3Bk0UQKQ==", "commit"=>"注文を確定する", "order"=>{"postage"=>"800", "billing_amount"=>"1350", "payment_method"=>"credit_card", "postal_code"=>"1230000", "addresses"=>"神奈川県横浜市3", "name"=>"坂本拓"}}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrder Create (0.5ms)[0m  [1m[32mINSERT INTO "orders" ("customer_id", "addresses", "name", "payment_method", "postage", "billing_amount", "created_at", "updated_at", "postal_code") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["customer_id", 1], ["addresses", "神奈川県横浜市3"], ["name", "坂本拓"], ["payment_method", 0], ["postage", 800], ["billing_amount", 1350], ["created_at", "2021-11-23 12:29:29.786384"], ["updated_at", "2021-11-23 12:29:29.786384"], ["postal_code", "1230000"]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCartItem Load (0.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mOrderDetail Create (0.4ms)[0m  [1m[32mINSERT INTO "order_details" ("order_id", "item_id", "price", "amount", "making_status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["order_id", 2], ["item_id", 4], ["price", 500], ["amount", 1], ["making_status", 0], ["created_at", "2021-11-23 12:29:29.807554"], ["updated_at", "2021-11-23 12:29:29.807554"]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCartItem Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cart_items" WHERE "cart_items"."id" = ?[0m  [["id", 29]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://988bd93e29bc4baaa06b294c6c72dc7d.vfs.cloud9.us-east-1.amazonaws.com/thanks
+Completed 302 Found in 39ms (ActiveRecord: 11.7ms)
+
+
+Started GET "/thanks" for 39.2.202.225 at 2021-11-23 12:29:29 +0000
+Cannot render console from 39.2.202.225! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::OrdersController#thanks as HTML
+  Rendering public/orders/thanks.html.erb within layouts/application
+  Rendered public/orders/thanks.html.erb within layouts/application (0.3ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 59ms (Views: 57.0ms | ActiveRecord: 0.1ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/Nagano_Cake/app/models/application_record.rb:1)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/Nagano_Cake/app/models/application_record.rb:1)

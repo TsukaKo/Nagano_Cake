@@ -18,15 +18,18 @@
           <tr>
             <td><%= order.created_at %></td>
             <td>
-              <%= order.postal_code %>
-              <%= order.address %>
+              〒<%= order.postal_code %>
+              <%= order.addresses %>
               <%= order.name %>
             </td>
+            <% order.order_details.each do |order_detail| %>
+            <td><%= order_detail.item.name %></td>
+            <% end %>
+            <td><%= order.billing_amount %></td>
             <td><%=%></td>
-            <td><%=%></td>
-            <td><%=%></td>
-            <td><%=%></td>
+            <td><%= link_to "表示する", order_path(order.id), class:"btn btn-success" %></td>
           </tr>
+          <% end %>
         </tbody>
       </table>
     </div>

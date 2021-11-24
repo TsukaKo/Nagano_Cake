@@ -29,6 +29,7 @@ class Public::OrdersController < ApplicationController
     @order = Order.new(order_params)
     puts "==========="
     p @order
+    @order.customer_id = current_customer.id
     @order.save
     current_customer.cart_items.each do |cart_item|
       order_detail = OrderDetail.new
@@ -44,15 +45,11 @@ class Public::OrdersController < ApplicationController
   end
 
   def index
-    @orders = Order.all
-    @order.postage = 800
-    @order.name = params[:order][:name]
-    @order.addresses = params[:order][:address]
-    @order.postal_code = params[:order][:postal_code]
-    @cart_item = current_customer.cart_items
+    @orders = current_customer.orders
   end
 
   def show
+    @order = current_customer.orders.find(params[:id])
   end
 
   private
