@@ -23219,3 +23219,1656 @@ true by adding the following to your application.rb file:
 
   Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
  (called from <top (required)> at /home/ec2-user/environment/Nagano_Cake/app/models/application_record.rb:1)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/Nagano_Cake/app/models/application_record.rb:1)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/Nagano_Cake/app/models/application_record.rb:1)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/Nagano_Cake/app/models/application_record.rb:1)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/Nagano_Cake/app/models/application_record.rb:1)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/Nagano_Cake/app/models/application_record.rb:1)
+Started GET "/" for 211.127.93.128 at 2021-11-29 12:45:23 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" ASC LIMIT ?[0m  [["LIMIT", 4]]
+  Rendered public/homes/top.html.erb within layouts/application (404.0ms)
+Completed 200 OK in 778ms (Views: 761.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin_order/1" for 211.127.93.128 at 2021-11-29 12:45:35 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/admin_order/1"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-29 12:46:25 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 253ms (ActiveRecord: 0.7ms)
+
+
+  
+NameError (undefined local variable or method `first_name' for #<Admin::OrdersController:0x00007f65cdf38560>):
+  
+app/controllers/admin/orders_controller.rb:5:in `show'
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-29 13:03:00 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT  "order_details".* FROM "order_details" WHERE "order_details"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  Rendered admin/orders/show.html.erb within layouts/application (7.3ms)
+Completed 500 Internal Server Error in 79ms (ActiveRecord: 2.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `created' for #<Order:0x00007f65cc450220>
+Did you mean?  created_at):
+     6:         <h5>購入者</h5>
+     7:         <p><%= @customer.first_name + @customer.last_name %></p>
+     8:         <h5>注文日</h5>
+     9:         <p><%= @order.created.at %></p>
+    10:         <h5>配送先</h5>
+    11:         <p><%= @order.address %></p>
+    12:         <h5>支払方法</h5>
+  
+app/views/admin/orders/show.html.erb:9:in `_app_views_admin_orders_show_html_erb__1932081348795177827_70037608758980'
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-29 13:03:35 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT  "order_details".* FROM "order_details" WHERE "order_details"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  Rendered admin/orders/show.html.erb within layouts/application (17.9ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `address' for #<Order:0x00007f65dc02a2f8>
+Did you mean?  addresses):
+     8:         <h5>注文日</h5>
+     9:         <p><%= @order.created_at %></p>
+    10:         <h5>配送先</h5>
+    11:         <p><%= @order.address %></p>
+    12:         <h5>支払方法</h5>
+    13:         <p><%= @order.payment_method %></p>
+    14:         <h5>注文ステータス</h5>
+  
+app/views/admin/orders/show.html.erb:11:in `_app_views_admin_orders_show_html_erb__1932081348795177827_70037729807940'
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-29 13:03:45 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT  "order_details".* FROM "order_details" WHERE "order_details"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  Rendered admin/orders/show.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 3..4)):
+    14:         <h5>注文ステータス</h5>
+    15:         <%= form_with model:@order_details, url:admin_order_path, method: :patch, local:true do |f| %>
+    16:         <p>
+    17:           <%= f.select :order_active, options_from_collection_for_select() %>
+    18:           <%= f.submit "更新", class:"btn btn-success" %>
+    19:         </p>
+    20:         <% end %>
+  
+app/views/admin/orders/show.html.erb:17:in `block in _app_views_admin_orders_show_html_erb__1932081348795177827_70037495839560'
+app/views/admin/orders/show.html.erb:15:in `_app_views_admin_orders_show_html_erb__1932081348795177827_70037495839560'
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-29 13:05:22 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT  "order_details".* FROM "order_details" WHERE "order_details"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  Rendered admin/orders/show.html.erb within layouts/application (154.3ms)
+Completed 500 Internal Server Error in 164ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `order_detail' for #<ActionView::Helpers::FormBuilder:0x00007f65cd3f3060>):
+    36:           <tbody>
+    37:             <% form_with model:@order_details, url:admin_orders_detail_path, method: :patch, local:true do |f| %>
+    38:             <tr>
+    39:               <td><%= f.order_detail.item.name %></td>
+    40:               <td><%= f.order_detail.item.price_add_tax %></td>
+    41:               <td><%= f.order_detail.amount %></td>
+    42:               <td><%= f.order_detail.price_add_tax * order_detail.amount %></td>
+  
+app/views/admin/orders/show.html.erb:39:in `block in _app_views_admin_orders_show_html_erb__1932081348795177827_70037605786360'
+app/views/admin/orders/show.html.erb:37:in `_app_views_admin_orders_show_html_erb__1932081348795177827_70037605786360'
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-29 13:06:44 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT  "order_details".* FROM "order_details" WHERE "order_details"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  Rendered admin/orders/show.html.erb within layouts/application (192.0ms)
+Completed 500 Internal Server Error in 203ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `item' for #<ActionView::Helpers::FormBuilder:0x00007f65c01efa78>):
+    36:           <tbody>
+    37:             <% form_with model:@order_details, url:admin_orders_detail_path, method: :patch, local:true do |f| %>
+    38:             <tr>
+    39:               <td><%= f.item.name %></td>
+    40:               <td><%= f.item.price_add_tax %></td>
+    41:               <td><%= f.amount %></td>
+    42:               <td><%= f.price_add_tax * f.amount %></td>
+  
+app/views/admin/orders/show.html.erb:39:in `block in _app_views_admin_orders_show_html_erb__1932081348795177827_70037612308980'
+app/views/admin/orders/show.html.erb:37:in `_app_views_admin_orders_show_html_erb__1932081348795177827_70037612308980'
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-29 13:06:56 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT  "order_details".* FROM "order_details" WHERE "order_details"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  Rendered admin/orders/show.html.erb within layouts/application (258.3ms)
+Completed 500 Internal Server Error in 275ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `item' for #<ActionView::Helpers::FormBuilder:0x00007f65cdc14618>):
+    36:           <tbody>
+    37:             <% form_with model:@order_details, url:admin_orders_detail_path, method: :patch, local:true do |f| %>
+    38:             <tr>
+    39:               <td><%= f.item.name %></td>
+    40:               <td><%= f.item.price_add_tax %></td>
+    41:               <td><%= f.amount %></td>
+    42:               <td><%= f.price_add_tax * f.amount %></td>
+  
+app/views/admin/orders/show.html.erb:39:in `block in _app_views_admin_orders_show_html_erb__1932081348795177827_70037610771780'
+app/views/admin/orders/show.html.erb:37:in `_app_views_admin_orders_show_html_erb__1932081348795177827_70037610771780'
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-29 13:06:58 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT  "order_details".* FROM "order_details" WHERE "order_details"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  Rendered admin/orders/show.html.erb within layouts/application (168.2ms)
+Completed 500 Internal Server Error in 178ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `item' for #<ActionView::Helpers::FormBuilder:0x00007f65c89588c0>):
+    36:           <tbody>
+    37:             <% form_with model:@order_details, url:admin_orders_detail_path, method: :patch, local:true do |f| %>
+    38:             <tr>
+    39:               <td><%= f.item.name %></td>
+    40:               <td><%= f.item.price_add_tax %></td>
+    41:               <td><%= f.amount %></td>
+    42:               <td><%= f.price_add_tax * f.amount %></td>
+  
+app/views/admin/orders/show.html.erb:39:in `block in _app_views_admin_orders_show_html_erb__1932081348795177827_70037566682160'
+app/views/admin/orders/show.html.erb:37:in `_app_views_admin_orders_show_html_erb__1932081348795177827_70037566682160'
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-29 13:23:13 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered admin/orders/show.html.erb within layouts/application (46.0ms)
+Completed 500 Internal Server Error in 107ms (ActiveRecord: 4.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `price_add_tax' for #<OrderDetail:0x00007f65ccc31250>
+Did you mean?  price_in_database):
+    40:               <td><%= d.item.name %></td>
+    41:               <td><%= d.item.price_add_tax %></td>
+    42:               <td><%= d.amount %></td>
+    43:               <td><%= d.price_add_tax * f.amount %></td>
+    44:               <td><%= f.select :maiking_status, options_for_select([["Dollar", "$"], ["Kroner", "DKK"]]) %></td>
+    45:               <td><%= f.submit "更新", class:"btn btn-success" %></td>
+    46:             </tr>
+  
+app/views/admin/orders/show.html.erb:43:in `block (2 levels) in _app_views_admin_orders_show_html_erb__1932081348795177827_70037597850180'
+app/views/admin/orders/show.html.erb:38:in `block in _app_views_admin_orders_show_html_erb__1932081348795177827_70037597850180'
+app/views/admin/orders/show.html.erb:37:in `_app_views_admin_orders_show_html_erb__1932081348795177827_70037597850180'
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-29 13:23:27 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered admin/orders/show.html.erb within layouts/application (14.9ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `price_add_tax' for #<OrderDetail:0x00007f65cd79a948>
+Did you mean?  price_in_database):
+    40:               <td><%= d.item.name %></td>
+    41:               <td><%= d.item.price_add_tax %></td>
+    42:               <td><%= d.amount %></td>
+    43:               <td><%= d.price_add_tax * d.amount %></td>
+    44:               <td><%= f.select :maiking_status, options_for_select([["Dollar", "$"], ["Kroner", "DKK"]]) %></td>
+    45:               <td><%= f.submit "更新", class:"btn btn-success" %></td>
+    46:             </tr>
+  
+app/views/admin/orders/show.html.erb:43:in `block (2 levels) in _app_views_admin_orders_show_html_erb__1932081348795177827_70037607830560'
+app/views/admin/orders/show.html.erb:38:in `block in _app_views_admin_orders_show_html_erb__1932081348795177827_70037607830560'
+app/views/admin/orders/show.html.erb:37:in `_app_views_admin_orders_show_html_erb__1932081348795177827_70037607830560'
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-29 13:23:32 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered admin/orders/show.html.erb within layouts/application (13.7ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `price_add_tax' for #<OrderDetail:0x00007f65c04fffb0>
+Did you mean?  price_in_database):
+    40:               <td><%= d.item.name %></td>
+    41:               <td><%= d.item.price_add_tax %></td>
+    42:               <td><%= d.amount %></td>
+    43:               <td><%= d.price_add_tax * d.amount %></td>
+    44:               <td><%= f.select :maiking_status, options_for_select([["Dollar", "$"], ["Kroner", "DKK"]]) %></td>
+    45:               <td><%= f.submit "更新", class:"btn btn-success" %></td>
+    46:             </tr>
+  
+app/views/admin/orders/show.html.erb:43:in `block (2 levels) in _app_views_admin_orders_show_html_erb__1932081348795177827_70037497007520'
+app/views/admin/orders/show.html.erb:38:in `block in _app_views_admin_orders_show_html_erb__1932081348795177827_70037497007520'
+app/views/admin/orders/show.html.erb:37:in `_app_views_admin_orders_show_html_erb__1932081348795177827_70037497007520'
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-29 13:23:56 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered admin/orders/show.html.erb within layouts/application (16.7ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `postage' for nil:NilClass):
+    53:         <h5>商品合計</h5>
+    54:         <p><%= @order.billing_amount - @order.postage %></p>
+    55:         <h5>送料</h5>
+    56:         <p><%= @order_detail.postage %></p>
+    57:         <h5>請求額合計</h5>
+    58:         <p><%= @order.billing_amount %></p>
+    59:       </div>
+  
+app/views/admin/orders/show.html.erb:56:in `_app_views_admin_orders_show_html_erb__1932081348795177827_70037609082320'
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-29 13:24:22 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered admin/orders/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 163ms (Views: 158.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-29 13:24:25 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered admin/orders/show.html.erb within layouts/application (5.5ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 116ms (Views: 110.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-29 13:27:00 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered admin/orders/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 122ms (Views: 117.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-29 13:27:03 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered admin/orders/show.html.erb within layouts/application (6.1ms)
+  [1m[36mCustomer Load (1.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 210ms (Views: 204.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-29 13:27:12 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered admin/orders/show.html.erb within layouts/application (5.9ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 127ms (Views: 122.0ms | ActiveRecord: 0.5ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/Nagano_Cake/app/models/application_record.rb:1)
+  [1m[36mOrder Load (1.6ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT  "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ? LIMIT ?[0m  [["order_id", 1], ["LIMIT", 11]]
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-29 13:31:18 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered admin/orders/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 172ms (Views: 168.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-29 13:31:21 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered admin/orders/show.html.erb within layouts/application (11.1ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 175ms (Views: 169.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-29 13:33:39 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered admin/orders/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 149ms (Views: 145.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-29 13:33:41 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered admin/orders/show.html.erb within layouts/application (5.7ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 160ms (Views: 155.0ms | ActiveRecord: 0.5ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/Nagano_Cake/app/models/application_record.rb:1)
+Started GET "/" for 211.127.93.128 at 2021-11-29 15:15:51 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" ASC LIMIT ?[0m  [["LIMIT", 4]]
+  Rendered public/homes/top.html.erb within layouts/application (288.7ms)
+Completed 200 OK in 558ms (Views: 539.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 211.127.93.128 at 2021-11-29 15:15:54 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" ASC LIMIT ?[0m  [["LIMIT", 4]]
+  Rendered public/homes/top.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 145ms (Views: 144.4ms | ActiveRecord: 0.1ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/Nagano_Cake/app/models/application_record.rb:1)
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-29 15:16:28 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  Rendered admin/orders/show.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 1.4ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting =>
+..._active, options_for_select({0:入金待ち, 1:入金確認,...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+..._for_select({0:入金待ち, 1:入金確認, 2:製作中, 3:...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+...入金待ち, 1:入金確認, 2:製作中, 3:発送準備中,...
+...                               ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+...1:入金確認, 2:製作中, 3:発送準備中, 4:発送済...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+...製作中, 3:発送準備中, 4:発送済み}) );@output_buff...
+...                               ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:20: syntax error, unexpected end, expecting ')'
+'.freeze;         end 
+                  ^~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting =>
+..._status, options_for_select({0:着手不可, 1:製作待ち,...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+..._for_select({0:着手不可, 1:製作待ち, 2:製作中, 3:...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+...着手不可, 1:製作待ち, 2:製作中, 3:製作完了}) )...
+...                               ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+...1:製作待ち, 2:製作中, 3:製作完了}) );@output_buff...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:46: syntax error, unexpected end, expecting ')'
+'.freeze;               end 
+                        ^~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:48: syntax error, unexpected end, expecting ')'
+'.freeze;             end 
+                      ^~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:64: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:66: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting =>
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:20: syntax error, unexpected end, expecting ')'
+app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting =>
+app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:46: syntax error, unexpected end, expecting ')'
+app/views/admin/orders/show.html.erb:48: syntax error, unexpected end, expecting ')'
+app/views/admin/orders/show.html.erb:64: syntax error, unexpected ensure, expecting ')'
+app/views/admin/orders/show.html.erb:66: syntax error, unexpected end, expecting ')'
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-29 15:16:36 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (1.8ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  Rendered admin/orders/show.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 2.5ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting =>
+..._active, options_for_select({0:入金待ち, 1:入金確認,...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+..._for_select({0:入金待ち, 1:入金確認, 2:製作中, 3:...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+...入金待ち, 1:入金確認, 2:製作中, 3:発送準備中,...
+...                               ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+...1:入金確認, 2:製作中, 3:発送準備中, 4:発送済...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+...製作中, 3:発送準備中, 4:発送済み}) );@output_buff...
+...                               ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:20: syntax error, unexpected end, expecting ')'
+'.freeze;         end 
+                  ^~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting =>
+..._status, options_for_select({0:着手不可, 1:製作待ち,...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+..._for_select({0:着手不可, 1:製作待ち, 2:製作中, 3:...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+...着手不可, 1:製作待ち, 2:製作中, 3:製作完了}) )...
+...                               ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+...1:製作待ち, 2:製作中, 3:製作完了}) );@output_buff...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:46: syntax error, unexpected end, expecting ')'
+'.freeze;               end 
+                        ^~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:48: syntax error, unexpected end, expecting ')'
+'.freeze;             end 
+                      ^~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:64: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:66: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting =>
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:20: syntax error, unexpected end, expecting ')'
+app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting =>
+app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:46: syntax error, unexpected end, expecting ')'
+app/views/admin/orders/show.html.erb:48: syntax error, unexpected end, expecting ')'
+app/views/admin/orders/show.html.erb:64: syntax error, unexpected ensure, expecting ')'
+app/views/admin/orders/show.html.erb:66: syntax error, unexpected end, expecting ')'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/Nagano_Cake/app/models/application_record.rb:1)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/Nagano_Cake/app/models/application_record.rb:1)
+Started GET "/" for 211.127.93.128 at 2021-11-30 12:16:22 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" ASC LIMIT ?[0m  [["LIMIT", 4]]
+  Rendered public/homes/top.html.erb within layouts/application (271.0ms)
+Completed 200 OK in 550ms (Views: 533.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 211.127.93.128 at 2021-11-30 12:16:24 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" ASC LIMIT ?[0m  [["LIMIT", 4]]
+  Rendered public/homes/top.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 124ms (Views: 123.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-30 12:16:30 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  Rendered admin/orders/show.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 1.3ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting =>
+..._active, options_for_select({0:入金待ち, 1:入金確認,...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+..._for_select({0:入金待ち, 1:入金確認, 2:製作中, 3:...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+...入金待ち, 1:入金確認, 2:製作中, 3:発送準備中,...
+...                               ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+...1:入金確認, 2:製作中, 3:発送準備中, 4:発送済...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+...製作中, 3:発送準備中, 4:発送済み}) );@output_buff...
+...                               ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:20: syntax error, unexpected end, expecting ')'
+'.freeze;         end 
+                  ^~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting =>
+..._status, options_for_select({0:着手不可, 1:製作待ち,...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+..._for_select({0:着手不可, 1:製作待ち, 2:製作中, 3:...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+...着手不可, 1:製作待ち, 2:製作中, 3:製作完了}) )...
+...                               ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+...1:製作待ち, 2:製作中, 3:製作完了}) );@output_buff...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:46: syntax error, unexpected end, expecting ')'
+'.freeze;               end 
+                        ^~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:48: syntax error, unexpected end, expecting ')'
+'.freeze;             end 
+                      ^~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:64: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:66: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting =>
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:20: syntax error, unexpected end, expecting ')'
+app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting =>
+app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:46: syntax error, unexpected end, expecting ')'
+app/views/admin/orders/show.html.erb:48: syntax error, unexpected end, expecting ')'
+app/views/admin/orders/show.html.erb:64: syntax error, unexpected ensure, expecting ')'
+app/views/admin/orders/show.html.erb:66: syntax error, unexpected end, expecting ')'
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-30 12:16:33 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (1.4ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  Rendered admin/orders/show.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.5ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting =>
+..._active, options_for_select({0:入金待ち, 1:入金確認,...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+..._for_select({0:入金待ち, 1:入金確認, 2:製作中, 3:...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+...入金待ち, 1:入金確認, 2:製作中, 3:発送準備中,...
+...                               ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+...1:入金確認, 2:製作中, 3:発送準備中, 4:発送済...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+...製作中, 3:発送準備中, 4:発送済み}) );@output_buff...
+...                               ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:20: syntax error, unexpected end, expecting ')'
+'.freeze;         end 
+                  ^~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting =>
+..._status, options_for_select({0:着手不可, 1:製作待ち,...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+..._for_select({0:着手不可, 1:製作待ち, 2:製作中, 3:...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+...着手不可, 1:製作待ち, 2:製作中, 3:製作完了}) )...
+...                               ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+...1:製作待ち, 2:製作中, 3:製作完了}) );@output_buff...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:46: syntax error, unexpected end, expecting ')'
+'.freeze;               end 
+                        ^~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:48: syntax error, unexpected end, expecting ')'
+'.freeze;             end 
+                      ^~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:64: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:66: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting =>
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:20: syntax error, unexpected end, expecting ')'
+app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting =>
+app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:46: syntax error, unexpected end, expecting ')'
+app/views/admin/orders/show.html.erb:48: syntax error, unexpected end, expecting ')'
+app/views/admin/orders/show.html.erb:64: syntax error, unexpected ensure, expecting ')'
+app/views/admin/orders/show.html.erb:66: syntax error, unexpected end, expecting ')'
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-30 12:20:56 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  Rendered admin/orders/show.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting =>
+..._active, options_for_select({0:入金待ち, 1:入金確認,...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+..._for_select({0:入金待ち, 1:入金確認, 2:製作中, 3:...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+...入金待ち, 1:入金確認, 2:製作中, 3:発送準備中,...
+...                               ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+...1:入金確認, 2:製作中, 3:発送準備中, 4:発送済...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+...製作中, 3:発送準備中, 4:発送済み}) );@output_buff...
+...                               ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:20: syntax error, unexpected end, expecting ')'
+'.freeze;         end 
+                  ^~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:64: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:66: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting =>
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:20: syntax error, unexpected end, expecting ')'
+app/views/admin/orders/show.html.erb:64: syntax error, unexpected ensure, expecting ')'
+app/views/admin/orders/show.html.erb:66: syntax error, unexpected end, expecting ')'
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-30 12:20:58 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  Rendered admin/orders/show.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting =>
+..._active, options_for_select({0:入金待ち, 1:入金確認,...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+..._for_select({0:入金待ち, 1:入金確認, 2:製作中, 3:...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+...入金待ち, 1:入金確認, 2:製作中, 3:発送準備中,...
+...                               ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+...1:入金確認, 2:製作中, 3:発送準備中, 4:発送済...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+...製作中, 3:発送準備中, 4:発送済み}) );@output_buff...
+...                               ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:20: syntax error, unexpected end, expecting ')'
+'.freeze;         end 
+                  ^~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:64: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:66: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting =>
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:20: syntax error, unexpected end, expecting ')'
+app/views/admin/orders/show.html.erb:64: syntax error, unexpected ensure, expecting ')'
+app/views/admin/orders/show.html.erb:66: syntax error, unexpected end, expecting ')'
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-30 12:21:09 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  Rendered admin/orders/show.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting =>
+..._active, options_for_select({0:入金待ち, 1:入金確認,...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+..._for_select({0:入金待ち, 1:入金確認, 2:製作中, 3:...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+...入金待ち, 1:入金確認, 2:製作中, 3:発送準備中,...
+...                               ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+...1:入金確認, 2:製作中, 3:発送準備中, 4:発送済...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+...製作中, 3:発送準備中, 4:発送済み}) );@output_buff...
+...                               ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:20: syntax error, unexpected end, expecting ')'
+'.freeze;         end 
+                  ^~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:64: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:66: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting =>
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:20: syntax error, unexpected end, expecting ')'
+app/views/admin/orders/show.html.erb:64: syntax error, unexpected ensure, expecting ')'
+app/views/admin/orders/show.html.erb:66: syntax error, unexpected end, expecting ')'
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-30 12:22:43 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  Rendered admin/orders/show.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting =>
+..._status, options_for_select({0:着手不可, 1:製作待ち,...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+..._for_select({0:着手不可, 1:製作待ち, 2:製作中, 3:...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+...着手不可, 1:製作待ち, 2:製作中, 3:製作完了}) )...
+...                               ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+...1:製作待ち, 2:製作中, 3:製作完了}) );@output_buff...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:46: syntax error, unexpected end, expecting ')'
+'.freeze;               end 
+                        ^~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:48: syntax error, unexpected end, expecting ')'
+'.freeze;             end 
+                      ^~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:64: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:66: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting =>
+app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:46: syntax error, unexpected end, expecting ')'
+app/views/admin/orders/show.html.erb:48: syntax error, unexpected end, expecting ')'
+app/views/admin/orders/show.html.erb:64: syntax error, unexpected ensure, expecting ')'
+app/views/admin/orders/show.html.erb:66: syntax error, unexpected end, expecting ')'
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-30 12:22:58 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  Rendered admin/orders/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting =>
+..._status, options_for_select({0:着手不可, 1:製作待ち,...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+..._for_select({0:着手不可, 1:製作待ち, 2:製作中, 3:...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+...着手不可, 1:製作待ち, 2:製作中, 3:製作完了}) )...
+...                               ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+...1:製作待ち, 2:製作中, 3:製作完了}) );@output_buff...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:46: syntax error, unexpected end, expecting ')'
+'.freeze;               end 
+                        ^~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:48: syntax error, unexpected end, expecting ')'
+'.freeze;             end 
+                      ^~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:64: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:66: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting =>
+app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:46: syntax error, unexpected end, expecting ')'
+app/views/admin/orders/show.html.erb:48: syntax error, unexpected end, expecting ')'
+app/views/admin/orders/show.html.erb:64: syntax error, unexpected ensure, expecting ')'
+app/views/admin/orders/show.html.erb:66: syntax error, unexpected end, expecting ')'
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-30 12:23:29 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  Rendered admin/orders/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting =>
+..._status, options_for_select({0:着手不可, 1:製作待ち,...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+..._for_select({0:着手不可, 1:製作待ち, 2:製作中, 3:...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+...着手不可, 1:製作待ち, 2:製作中, 3:製作完了}) )...
+...                               ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+...1:製作待ち, 2:製作中, 3:製作完了}) );@output_buff...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:46: syntax error, unexpected end, expecting ')'
+'.freeze;               end 
+                        ^~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:48: syntax error, unexpected end, expecting ')'
+'.freeze;             end 
+                      ^~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:64: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:66: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting =>
+app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:46: syntax error, unexpected end, expecting ')'
+app/views/admin/orders/show.html.erb:48: syntax error, unexpected end, expecting ')'
+app/views/admin/orders/show.html.erb:64: syntax error, unexpected ensure, expecting ')'
+app/views/admin/orders/show.html.erb:66: syntax error, unexpected end, expecting ')'
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-30 12:24:34 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  Rendered admin/orders/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting =>
+..._status, options_for_select({0:着手不可, 1:製作待ち,...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+..._for_select({0:着手不可, 1:製作待ち, 2:製作中, 3:...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+...着手不可, 1:製作待ち, 2:製作中, 3:製作完了}) )...
+...                               ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+...1:製作待ち, 2:製作中, 3:製作完了}) );@output_buff...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:46: syntax error, unexpected end, expecting ')'
+'.freeze;               end 
+                        ^~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:48: syntax error, unexpected end, expecting ')'
+'.freeze;             end 
+                      ^~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:64: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:66: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting =>
+app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:46: syntax error, unexpected end, expecting ')'
+app/views/admin/orders/show.html.erb:48: syntax error, unexpected end, expecting ')'
+app/views/admin/orders/show.html.erb:64: syntax error, unexpected ensure, expecting ')'
+app/views/admin/orders/show.html.erb:66: syntax error, unexpected end, expecting ')'
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-30 12:25:07 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered admin/orders/show.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 182ms (Views: 177.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-30 12:25:30 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  Rendered admin/orders/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting =>
+..._active, options_for_select({0:入金待ち, 1:入金確認,...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+..._for_select({0:入金待ち, 1:入金確認, 2:製作中, 3:...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+...入金待ち, 1:入金確認, 2:製作中, 3:発送準備中,...
+...                               ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+...1:入金確認, 2:製作中, 3:発送準備中, 4:発送済...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+...製作中, 3:発送準備中, 4:発送済み}) );@output_buff...
+...                               ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:20: syntax error, unexpected end, expecting ')'
+'.freeze;         end 
+                  ^~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:64: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:66: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting =>
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting '.' or &. or :: or '['
+app/views/admin/orders/show.html.erb:20: syntax error, unexpected end, expecting ')'
+app/views/admin/orders/show.html.erb:64: syntax error, unexpected ensure, expecting ')'
+app/views/admin/orders/show.html.erb:66: syntax error, unexpected end, expecting ')'
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-30 12:25:39 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered admin/orders/show.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 133ms (Views: 124.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-30 12:29:21 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  Rendered admin/orders/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting =>
+..._active, options_for_select({0: "入金待ち", 1:"入金確...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ',', expecting ')'
+..._for_select({0: "入金待ち", 1:"入金確認", 2:"製作...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ',', expecting ')'
+...入金待ち", 1:"入金確認", 2:"製作中", 3:"発送準...
+...                               ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ',', expecting ')'
+...:"入金確認", 2:"製作中", 3:"発送準備中", 4:"発...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ',', expecting ')'
+...製作中", 3:"発送準備中", 4:"発送済み"}) );@output...
+...                               ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected '}', expecting ')'
+...送準備中", 4:"発送済み"}) );@output_buffer.safe_appen...
+...                               ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:20: syntax error, unexpected end, expecting ')'
+'.freeze;         end 
+                  ^~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting =>
+..._status, options_for_select({0:"着手不可", 1:"製作待...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:44: syntax error, unexpected ',', expecting ')'
+...s_for_select({0:"着手不可", 1:"製作待ち", 2:"製作...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:44: syntax error, unexpected ',', expecting ')'
+...着手不可", 1:"製作待ち", 2:"製作中", 3:"製作完...
+...                               ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:44: syntax error, unexpected ',', expecting ')'
+...:"製作待ち", 2:"製作中", 3:"製作完了"}) );@output...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:44: syntax error, unexpected '}', expecting ')'
+...:"製作中", 3:"製作完了"}) );@output_buffer.safe_appen...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:46: syntax error, unexpected end, expecting ')'
+'.freeze;               end 
+                        ^~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:48: syntax error, unexpected end, expecting ')'
+'.freeze;             end 
+                      ^~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:64: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:66: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting =>
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ',', expecting ')'
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ',', expecting ')'
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ',', expecting ')'
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ',', expecting ')'
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected '}', expecting ')'
+app/views/admin/orders/show.html.erb:20: syntax error, unexpected end, expecting ')'
+app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting =>
+app/views/admin/orders/show.html.erb:44: syntax error, unexpected ',', expecting ')'
+app/views/admin/orders/show.html.erb:44: syntax error, unexpected ',', expecting ')'
+app/views/admin/orders/show.html.erb:44: syntax error, unexpected ',', expecting ')'
+app/views/admin/orders/show.html.erb:44: syntax error, unexpected '}', expecting ')'
+app/views/admin/orders/show.html.erb:46: syntax error, unexpected end, expecting ')'
+app/views/admin/orders/show.html.erb:48: syntax error, unexpected end, expecting ')'
+app/views/admin/orders/show.html.erb:64: syntax error, unexpected ensure, expecting ')'
+app/views/admin/orders/show.html.erb:66: syntax error, unexpected end, expecting ')'
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-30 12:29:49 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  Rendered admin/orders/show.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting =>
+..._active, options_for_select({0:"入金待ち", 1:"入金確...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ',', expecting ')'
+...s_for_select({0:"入金待ち", 1:"入金確認", 2:"製作...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ',', expecting ')'
+...入金待ち", 1:"入金確認", 2:"製作中", 3:"発送準...
+...                               ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ',', expecting ')'
+...:"入金確認", 2:"製作中", 3:"発送準備中", 4:"発...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ',', expecting ')'
+...製作中", 3:"発送準備中", 4:"発送済み"}) );@output...
+...                               ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected '}', expecting ')'
+...送準備中", 4:"発送済み"}) );@output_buffer.safe_appen...
+...                               ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:20: syntax error, unexpected end, expecting ')'
+'.freeze;         end 
+                  ^~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting =>
+..._status, options_for_select({0:"着手不可", 1:"製作待...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:44: syntax error, unexpected ',', expecting ')'
+...s_for_select({0:"着手不可", 1:"製作待ち", 2:"製作...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:44: syntax error, unexpected ',', expecting ')'
+...着手不可", 1:"製作待ち", 2:"製作中", 3:"製作完...
+...                               ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:44: syntax error, unexpected ',', expecting ')'
+...:"製作待ち", 2:"製作中", 3:"製作完了"}) );@output...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:44: syntax error, unexpected '}', expecting ')'
+...:"製作中", 3:"製作完了"}) );@output_buffer.safe_appen...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:46: syntax error, unexpected end, expecting ')'
+'.freeze;               end 
+                        ^~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:48: syntax error, unexpected end, expecting ')'
+'.freeze;             end 
+                      ^~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:64: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:66: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting =>
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ',', expecting ')'
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ',', expecting ')'
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ',', expecting ')'
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ',', expecting ')'
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected '}', expecting ')'
+app/views/admin/orders/show.html.erb:20: syntax error, unexpected end, expecting ')'
+app/views/admin/orders/show.html.erb:44: syntax error, unexpected ':', expecting =>
+app/views/admin/orders/show.html.erb:44: syntax error, unexpected ',', expecting ')'
+app/views/admin/orders/show.html.erb:44: syntax error, unexpected ',', expecting ')'
+app/views/admin/orders/show.html.erb:44: syntax error, unexpected ',', expecting ')'
+app/views/admin/orders/show.html.erb:44: syntax error, unexpected '}', expecting ')'
+app/views/admin/orders/show.html.erb:46: syntax error, unexpected end, expecting ')'
+app/views/admin/orders/show.html.erb:48: syntax error, unexpected end, expecting ')'
+app/views/admin/orders/show.html.erb:64: syntax error, unexpected ensure, expecting ')'
+app/views/admin/orders/show.html.erb:66: syntax error, unexpected end, expecting ')'
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-30 12:30:31 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  Rendered admin/orders/show.html.erb within layouts/application (17.1ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting =>
+..._active, options_for_select({0:"入金待ち", 1:"入金確...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ',', expecting ')'
+...s_for_select({0:"入金待ち", 1:"入金確認", 2:"製作...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ',', expecting ')'
+...入金待ち", 1:"入金確認", 2:"製作中", 3:"発送準...
+...                               ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ',', expecting ')'
+...:"入金確認", 2:"製作中", 3:"発送準備中", 4:"発...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ',', expecting ')'
+...製作中", 3:"発送準備中", 4:"発送済み"}) );@output...
+...                               ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected '}', expecting ')'
+...送準備中", 4:"発送済み"}) );@output_buffer.safe_appen...
+...                               ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:20: syntax error, unexpected end, expecting ')'
+'.freeze;         end 
+                  ^~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:64: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:66: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting =>
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ',', expecting ')'
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ',', expecting ')'
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ',', expecting ')'
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ',', expecting ')'
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected '}', expecting ')'
+app/views/admin/orders/show.html.erb:20: syntax error, unexpected end, expecting ')'
+app/views/admin/orders/show.html.erb:64: syntax error, unexpected ensure, expecting ')'
+app/views/admin/orders/show.html.erb:66: syntax error, unexpected end, expecting ')'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/Nagano_Cake/app/models/application_record.rb:1)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/Nagano_Cake/app/models/application_record.rb:1)
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-30 12:33:29 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mItem Load (0.9ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered admin/orders/show.html.erb within layouts/application (80.7ms)
+Completed 200 OK in 797ms (Views: 743.6ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-30 12:33:45 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  Rendered admin/orders/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting =>
+...中", "3":"発送準備中", 4:"発送済み"}) );@output_bu...
+...                              ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:17: syntax error, unexpected '}', expecting ')'
+...送準備中", 4:"発送済み"}) );@output_buffer.safe_appen...
+...                               ^
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:20: syntax error, unexpected end, expecting ')'
+'.freeze;         end 
+                  ^~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:64: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/ec2-user/environment/Nagano_Cake/app/views/admin/orders/show.html.erb:66: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected ':', expecting =>
+app/views/admin/orders/show.html.erb:17: syntax error, unexpected '}', expecting ')'
+app/views/admin/orders/show.html.erb:20: syntax error, unexpected end, expecting ')'
+app/views/admin/orders/show.html.erb:64: syntax error, unexpected ensure, expecting ')'
+app/views/admin/orders/show.html.erb:66: syntax error, unexpected end, expecting ')'
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-30 12:34:26 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered admin/orders/show.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 185ms (Views: 180.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-30 12:34:32 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered admin/orders/show.html.erb within layouts/application (7.0ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 192ms (Views: 186.4ms | ActiveRecord: 0.6ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/Nagano_Cake/app/models/application_record.rb:1)
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-30 12:39:54 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered admin/orders/show.html.erb within layouts/application (80.4ms)
+Completed 200 OK in 728ms (Views: 676.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-30 12:39:58 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered admin/orders/show.html.erb within layouts/application (5.6ms)
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 140ms (Views: 134.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/orders/1" for 211.127.93.128 at 2021-11-30 12:54:07 +0000
+Cannot render console from 211.127.93.128! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered admin/orders/show.html.erb within layouts/application (5.9ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 143ms (Views: 136.5ms | ActiveRecord: 0.8ms)
+
+
