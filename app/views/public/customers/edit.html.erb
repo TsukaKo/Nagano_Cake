@@ -2,24 +2,25 @@
   <div class="row">
     <div class="col">
       <h4 class="bg-secondary d-inline px2">会員情報編集</h5>
-      <%= form_with model:@customer, url:addresses_path, local:true do |f| %>
+      <%= form_with model:@customer, url:customer_path, local:true do |f| %>
       <h5>氏名</h5>
-      <%= f.taxt_field :first_name %>
-      <%= f.taxt_field :last_name %>
+      <%= f.text_field :first_name %>
+      <%= f.text_field :last_name %>
       <h5>フリガナ</h5>
-      <%= f.taxt_field :first_name_kana %>
-      <%= f.taxt_field :last_name_kana %>
+      <%= f.text_field :first_name_kana %>
+      <%= f.text_field :last_name_kana %>
       <h5>郵便番号</h5>
-      <%= f.taxt_field :postal_code %>
+      <%= f.text_field :postal_code %>
       <h5>住所</h5>
-      <%= f.taxt_field :address %>
+      <%= f.text_field :address %>
       <h5>電話番号</h5>
-      <%= f.taxt_field :telephone_number %>
+      <%= f.text_field :telephone_number %>
       <h5>メールアドレス</h5>
-      <%= f.taxt_field :email %>
-      <%= f.submit "編集内容", class:"btn btn-success" %>
+      <%= f.text_field :email %>
+      <%= f.submit "編集内容を保存", class:"btn btn-success" %>
       <% end %>
-      <%= link_to "退会する" unsubsceibe_path class="btn btn-danger" %>
+
+      <%= link_to "退会する", unsubsceibe_path, class:"btn btn-danger" %>
     </div>
   </div>
 </div>

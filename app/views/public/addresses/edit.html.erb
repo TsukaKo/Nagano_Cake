@@ -4,13 +4,13 @@
       <h4 class="bg-secondary d-inline px2">配送先編集</h4>
       <%= form_with model:@address, url:addresses_path, local:true do |f| %>
       <h5>郵便番号（ハイフンなし）</h5>
-      <%= f.taxt_field :postal_code %>
+      <%= f.text_field :postal_code %>
       <h5>住所</h5>
-      <%= f.taxt_field :address %>
+      <%= f.text_field :address %>
       <h5>宛名</h5>
-      <%= f.taxt_field :name %>
-      <%= f.submit "変更内容を保存", class:"btn btn-success" %>
+      <%= f.text_field :name %>
       <% end %>
+      <%= link_to "変更内容を保存", address_path, class:"btn btn-success" %>
     </div>
   </div>
 </div>

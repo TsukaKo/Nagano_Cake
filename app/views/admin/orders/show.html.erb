@@ -14,7 +14,7 @@
         <h5>注文ステータス</h5>
         <%= form_with model:@order, url:admin_order_path, method: :patch, local:true do |f| %>
         <p>
-          <%= f.select :order_active, options_for_select({"入金待ち":0, "入金確認":1, "製作中":2, "発送準備中":3, "発送済み":4}) %>
+          <%= f.select :order_active, Order.order_actives_i18n.invert %>
           <%= f.submit "更新", class:"btn btn-success" %>
         </p>
         <% end %>
@@ -41,7 +41,7 @@
               <td><%= d.amount %></td>
               <td><%= d.price * d.amount %></td>
               <%= form_with model: d, url: admin_orders_detail_path, method: :patch, local: true do |f| %>
-              <td><%= f.select :maiking_status, options_for_select({"着手不可": 0, "製作待ち":1, "製作中":2, "製作完了":3}) %></td>
+              <td><%= f.select :making_status, OrderDetail.making_statuses_i18n.invert %></td>
               <td><%= f.submit "更新", class:"btn btn-success" %></td>
               <% end %>
             </tr>

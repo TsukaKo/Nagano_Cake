@@ -22,11 +22,13 @@
               <%= order.addresses %>
               <%= order.name %>
             </td>
-            <% order.order_details.each do |order_detail| %>
-            <td><%= order_detail.item.name %></td>
-            <% end %>
+            <td>
+              <% order.order_details.each do |order_detail| %>
+                <%= order_detail.item.name %>
+              <% end %>
+            </td>
             <td><%= order.billing_amount %></td>
-            <td><%=%></td>
+            <td><%= order.order_active %></td>
             <td><%= link_to "表示する", order_path(order.id), class:"btn btn-success" %></td>
           </tr>
           <% end %>
