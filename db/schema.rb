@@ -105,5 +105,5 @@ ActiveRecord::Schema.define(version: 2021_11_03_113446) do
     t.datetime "updated_at", null: false
     t.string "postal_code"
   end
-
+git
 end

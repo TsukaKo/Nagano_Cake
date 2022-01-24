@@ -46,6 +46,7 @@ class Public::OrdersController < ApplicationController
 
   def index
     @orders = current_customer.orders
+    order_active = 0
   end
 
   def show
