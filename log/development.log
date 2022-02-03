@@ -35408,3 +35408,433 @@ Processing by Admin::CustomersController#show as HTML
 Completed 200 OK in 126ms (Views: 123.0ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/" for 211.131.70.241 at 2022-02-03 12:35:14 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" ASC LIMIT ?[0m  [["LIMIT", 4]]
+  Rendered public/homes/top.html.erb within layouts/application (5.8ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 183ms (Views: 180.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/items" for 211.131.70.241 at 2022-02-03 12:35:53 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#index as HTML
+  Rendering admin/items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  Rendered admin/items/index.html.erb within layouts/application (21.7ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 143ms (Views: 140.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/customers" for 211.131.70.241 at 2022-02-03 12:35:55 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#index as HTML
+  Rendering admin/customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" ORDER BY "customers"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  Rendered admin/customers/index.html.erb within layouts/application (4.1ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 142ms (Views: 140.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin" for 211.131.70.241 at 2022-02-03 12:35:59 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 2]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 3]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 4]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 5]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 6]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 7]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 8]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 9]]
+  Rendered admin/homes/top.html.erb within layouts/application (38.5ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 161ms (Views: 153.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/admin/orders/1" for 211.131.70.241 at 2022-02-03 12:36:12 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered admin/orders/show.html.erb within layouts/application (8.4ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 151ms (Views: 144.3ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/admin/orders/1" for 211.131.70.241 at 2022-02-03 12:36:32 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GTCTPSYiY/HHY8LS8SZGvLdIfRh46CUCHU+L30z+W3g4TCfcH8xrGMXeOMG5ad8yGftCwIRWwoslkbS+RBbnvw==", "order"=>{"order_active"=>"production"}, "commit"=>"更新", "id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrder Update (3.8ms)[0m  [1m[33mUPDATE "orders" SET "order_active" = ?, "updated_at" = ? WHERE "orders"."id" = ?[0m  [["order_active", 2], ["updated_at", "2022-02-03 12:36:32.177058"], ["id", 1]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://988bd93e29bc4baaa06b294c6c72dc7d.vfs.cloud9.us-east-1.amazonaws.com/admin
+Completed 302 Found in 22ms (ActiveRecord: 8.5ms)
+
+
+Started GET "/admin" for 211.131.70.241 at 2022-02-03 12:36:32 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 2]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 3]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 4]]
+  [1m[36mOrderDetail Load (0.9ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 5]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 6]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 7]]
+  [1m[36mOrderDetail Load (1.0ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 8]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 9]]
+  Rendered admin/homes/top.html.erb within layouts/application (24.5ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 236ms (Views: 232.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/admin/orders/1" for 211.131.70.241 at 2022-02-03 12:36:36 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered admin/orders/show.html.erb within layouts/application (5.7ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 171ms (Views: 136.3ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/admin/orders/1" for 211.131.70.241 at 2022-02-03 12:37:19 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"reR5TWKfUNlfDqbjyw0ArYilA9lAKrAU6+13MYfZNW2MmM2sW3FYMF2zXPCDQpkjJhY8AbyUV53TM0hQjzGJqg==", "order"=>{"order_active"=>"production"}, "commit"=>"更新", "id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://988bd93e29bc4baaa06b294c6c72dc7d.vfs.cloud9.us-east-1.amazonaws.com/admin
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/admin" for 211.131.70.241 at 2022-02-03 12:37:19 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 2]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 3]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 4]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 5]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 6]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 7]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 8]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 9]]
+  Rendered admin/homes/top.html.erb within layouts/application (19.2ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 165ms (Views: 163.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/orders/3" for 211.131.70.241 at 2022-02-03 12:37:37 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 3]]
+  Rendered admin/orders/show.html.erb within layouts/application (4.1ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 148ms (Views: 143.2ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/admin/orders/3" for 211.131.70.241 at 2022-02-03 12:37:45 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2cqtR825zNcocLgXkmsNwBUxjAyRXOaHgCPaFAO+TL05YS0R238a+GQob2TPUmEYzrsJ5yKtwf45/XIvv59LXg==", "order"=>{"order_active"=>"payment_confirmation"}, "commit"=>"更新", "id"=>"3"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrder Update (1.7ms)[0m  [1m[33mUPDATE "orders" SET "order_active" = ?, "updated_at" = ? WHERE "orders"."id" = ?[0m  [["order_active", 1], ["updated_at", "2022-02-03 12:37:45.628571"], ["id", 3]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://988bd93e29bc4baaa06b294c6c72dc7d.vfs.cloud9.us-east-1.amazonaws.com/admin
+Completed 302 Found in 14ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/admin" for 211.131.70.241 at 2022-02-03 12:37:45 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 2]]
+  [1m[36mOrderDetail Load (0.7ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 3]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 4]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 5]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 6]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 7]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 8]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 9]]
+  Rendered admin/homes/top.html.erb within layouts/application (19.0ms)
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 138ms (Views: 135.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admin/orders/4" for 211.131.70.241 at 2022-02-03 12:37:51 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 4]]
+  Rendered admin/orders/show.html.erb within layouts/application (4.1ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 150ms (Views: 145.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/orders/7" for 211.131.70.241 at 2022-02-03 12:38:06 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 7]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered admin/orders/show.html.erb within layouts/application (8.8ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 132ms (Views: 127.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/orders/7" for 211.131.70.241 at 2022-02-03 12:38:08 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 7]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered admin/orders/show.html.erb within layouts/application (7.8ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 148ms (Views: 143.5ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/admin/orders/7" for 211.131.70.241 at 2022-02-03 12:38:19 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Wf8dhXO/LSJq8XlJXhfCmZ9m1/ql+fQy3jfoClXTaV/gI2JVVZf4dE78MPnr6J6nCLXuoHDu7D0H0+EEb5KmUQ==", "order"=>{"order_active"=>"payment_confirmation"}, "commit"=>"更新", "id"=>"7"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mOrder Update (1.2ms)[0m  [1m[33mUPDATE "orders" SET "order_active" = ?, "updated_at" = ? WHERE "orders"."id" = ?[0m  [["order_active", 1], ["updated_at", "2022-02-03 12:38:19.741651"], ["id", 7]]
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://988bd93e29bc4baaa06b294c6c72dc7d.vfs.cloud9.us-east-1.amazonaws.com/admin
+Completed 302 Found in 17ms (ActiveRecord: 7.9ms)
+
+
+Started GET "/admin" for 211.131.70.241 at 2022-02-03 12:38:19 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 2]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 3]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 4]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 5]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 6]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 7]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 8]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 9]]
+  Rendered admin/homes/top.html.erb within layouts/application (18.3ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 141ms (Views: 139.0ms | ActiveRecord: 1.0ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/Nagano_Cake/app/models/application_record.rb:1)
+Started GET "/admin" for 211.131.70.241 at 2022-02-03 12:45:11 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  Rendered admin/homes/top.html.erb within layouts/application (42.8ms)
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `order_active_i18n_invent' for #<Order:0x00007fa36823c928>
+Did you mean?  order_active_i18n):
+    27:             <td>
+    28:                 <%= quantity %>
+    29:             </td>
+    30:             <td><%= order.order_active_i18n_invent %></td>
+    31:           </tr>
+    32:         <% end %>
+    33:         </tbody>
+  
+app/views/admin/homes/top.html.erb:30:in `block in _app_views_admin_homes_top_html_erb__1437775019508866394_70169901422480'
+app/views/admin/homes/top.html.erb:15:in `_app_views_admin_homes_top_html_erb__1437775019508866394_70169901422480'
+Started GET "/admin/orders/7" for 211.131.70.241 at 2022-02-03 12:45:14 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 7]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered admin/orders/show.html.erb within layouts/application (22.6ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 188ms (Views: 166.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/admin" for 211.131.70.241 at 2022-02-03 12:48:10 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  Rendered admin/homes/top.html.erb within layouts/application (9.3ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `invent' for "製作中":String
+Did you mean?  indent
+               indent!):
+    27:             <td>
+    28:                 <%= quantity %>
+    29:             </td>
+    30:             <td><%= order.order_active_i18n.invent %></td>
+    31:           </tr>
+    32:         <% end %>
+    33:         </tbody>
+  
+app/views/admin/homes/top.html.erb:30:in `block in _app_views_admin_homes_top_html_erb__1437775019508866394_70169807700880'
+app/views/admin/homes/top.html.erb:15:in `_app_views_admin_homes_top_html_erb__1437775019508866394_70169807700880'
+Started GET "/admin/orders/3" for 211.131.70.241 at 2022-02-03 12:48:13 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 3]]
+  Rendered admin/orders/show.html.erb within layouts/application (4.1ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 174ms (Views: 168.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/orders/3" for 211.131.70.241 at 2022-02-03 12:48:18 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 3]]
+  Rendered admin/orders/show.html.erb within layouts/application (4.2ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 127ms (Views: 121.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin" for 211.131.70.241 at 2022-02-03 12:48:20 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  Rendered admin/homes/top.html.erb within layouts/application (13.5ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `invent' for "製作中":String
+Did you mean?  indent
+               indent!):
+    27:             <td>
+    28:                 <%= quantity %>
+    29:             </td>
+    30:             <td><%= order.order_active_i18n.invent %></td>
+    31:           </tr>
+    32:         <% end %>
+    33:         </tbody>
+  
+app/views/admin/homes/top.html.erb:30:in `block in _app_views_admin_homes_top_html_erb__1437775019508866394_70169769360320'
+app/views/admin/homes/top.html.erb:15:in `_app_views_admin_homes_top_html_erb__1437775019508866394_70169769360320'
+Started GET "/admin" for 211.131.70.241 at 2022-02-03 12:48:44 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  [1m[36mOrder Load (0.8ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 2]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 3]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 4]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 5]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 6]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 7]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 8]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 9]]
+  Rendered admin/homes/top.html.erb within layouts/application (19.6ms)
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 139ms (Views: 136.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admin/orders/1" for 211.131.70.241 at 2022-02-03 12:48:49 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/orders/show.html.erb within layouts/application
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered admin/orders/show.html.erb within layouts/application (6.6ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 147ms (Views: 141.9ms | ActiveRecord: 0.6ms)
+
+
