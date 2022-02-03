@@ -34964,3 +34964,447 @@ true by adding the following to your application.rb file:
   Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
  (called from <top (required)> at /home/ec2-user/environment/Nagano_Cake/app/models/application_record.rb:1)
   [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ?[0m  [["LIMIT", 11]]
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/Nagano_Cake/app/models/application_record.rb:1)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/Nagano_Cake/app/models/application_record.rb:1)
+Started GET "/admin/sign_in" for 211.131.70.241 at 2022-02-03 11:48:08 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/sessions/new.html.erb within layouts/application (592.5ms)
+Completed 200 OK in 1428ms (Views: 1412.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admin/sign_in" for 211.131.70.241 at 2022-02-03 11:48:12 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::SessionsController#new as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to https://988bd93e29bc4baaa06b294c6c72dc7d.vfs.cloud9.us-east-1.amazonaws.com/admin
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 13ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 211.131.70.241 at 2022-02-03 11:48:12 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 2]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 3]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 4]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 5]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 6]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 7]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 8]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 9]]
+  Rendered admin/homes/top.html.erb within layouts/application (59.9ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 192ms (Views: 181.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/admin" for 211.131.70.241 at 2022-02-03 11:50:52 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 2]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 3]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 4]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 5]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 6]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 7]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 8]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 9]]
+  Rendered admin/homes/top.html.erb within layouts/application (18.3ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 160ms (Views: 158.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/genres" for 211.131.70.241 at 2022-02-03 11:50:53 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#index as HTML
+  Rendering admin/genres/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered admin/genres/index.html.erb within layouts/application (3.1ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 130ms (Views: 121.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/genres/1/edit" for 211.131.70.241 at 2022-02-03 11:50:57 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/genres/edit.html.erb within layouts/application
+  Rendered admin/genres/edit.html.erb within layouts/application (1.6ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 133ms (Views: 127.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/items" for 211.131.70.241 at 2022-02-03 11:50:59 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#index as HTML
+  Rendering admin/items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  Rendered admin/items/index.html.erb within layouts/application (31.7ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 171ms (Views: 164.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/customers" for 211.131.70.241 at 2022-02-03 11:51:03 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#index as HTML
+  Rendering admin/customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" ORDER BY "customers"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  Rendered admin/customers/index.html.erb within layouts/application (16.1ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 174ms (Views: 171.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/customers/2" for 211.131.70.241 at 2022-02-03 12:09:17 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering admin/customers/show.html.erb within layouts/application
+  Rendered admin/customers/show.html.erb within layouts/application (0.9ms)
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 134ms (Views: 129.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 211.131.70.241 at 2022-02-03 12:09:34 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" ASC LIMIT ?[0m  [["LIMIT", 4]]
+  Rendered public/homes/top.html.erb within layouts/application (5.5ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 116ms (Views: 113.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/customers" for 211.131.70.241 at 2022-02-03 12:11:39 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#index as HTML
+  Rendering admin/customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (2.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" ORDER BY "customers"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  Rendered admin/customers/index.html.erb within layouts/application (12.3ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 212ms (Views: 192.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/admin/customers" for 211.131.70.241 at 2022-02-03 12:23:56 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#index as HTML
+  Rendering admin/customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" ORDER BY "customers"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  Rendered admin/customers/index.html.erb within layouts/application (3.7ms)
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 112ms (Views: 110.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/customers" for 211.131.70.241 at 2022-02-03 12:24:17 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#index as HTML
+  Rendering admin/customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" ORDER BY "customers"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  Rendered admin/customers/index.html.erb within layouts/application (3.7ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 127ms (Views: 125.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/customers" for 211.131.70.241 at 2022-02-03 12:24:32 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#index as HTML
+  Rendering admin/customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" ORDER BY "customers"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  Rendered admin/customers/index.html.erb within layouts/application (5.3ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 131ms (Views: 129.5ms | ActiveRecord: 0.3ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/Nagano_Cake/app/models/application_record.rb:1)
+  [1m[36mCustomer Load (1.7ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCustomer Update All (6.4ms)[0m  [1m[33mUPDATE "customers" SET "is_active" = 't'[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/admin/customers" for 211.131.70.241 at 2022-02-03 12:27:20 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#index as HTML
+  Rendering admin/customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" ORDER BY "customers"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  Rendered admin/customers/index.html.erb within layouts/application (15.4ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 160ms (Views: 154.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admin/customers" for 211.131.70.241 at 2022-02-03 12:30:29 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#index as HTML
+  Rendering admin/customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" ORDER BY "customers"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  Rendered admin/customers/index.html.erb within layouts/application (4.3ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 145ms (Views: 142.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/customers/3" for 211.131.70.241 at 2022-02-03 12:30:31 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering admin/customers/show.html.erb within layouts/application
+  Rendered admin/customers/show.html.erb within layouts/application (1.0ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 153ms (Views: 148.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/items" for 211.131.70.241 at 2022-02-03 12:30:34 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#index as HTML
+  Rendering admin/items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  Rendered admin/items/index.html.erb within layouts/application (35.6ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 177ms (Views: 169.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/admin/items/3" for 211.131.70.241 at 2022-02-03 12:30:37 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering admin/items/show.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered admin/items/show.html.erb within layouts/application (2.7ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 132ms (Views: 127.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/items" for 211.131.70.241 at 2022-02-03 12:30:42 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#index as HTML
+  Rendering admin/items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  Rendered admin/items/index.html.erb within layouts/application (21.3ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 169ms (Views: 166.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/customers" for 211.131.70.241 at 2022-02-03 12:30:43 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#index as HTML
+  Rendering admin/customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" ORDER BY "customers"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  Rendered admin/customers/index.html.erb within layouts/application (3.5ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 154ms (Views: 152.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/customers/3" for 211.131.70.241 at 2022-02-03 12:30:47 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering admin/customers/show.html.erb within layouts/application
+  Rendered admin/customers/show.html.erb within layouts/application (1.3ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 156ms (Views: 151.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/customers/3" for 211.131.70.241 at 2022-02-03 12:31:41 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering admin/customers/show.html.erb within layouts/application
+  Rendered admin/customers/show.html.erb within layouts/application (0.9ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 126ms (Views: 123.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/customers/3" for 211.131.70.241 at 2022-02-03 12:31:55 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering admin/customers/show.html.erb within layouts/application
+  Rendered admin/customers/show.html.erb within layouts/application (0.9ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 142ms (Views: 138.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/customers/3/edit" for 211.131.70.241 at 2022-02-03 12:32:00 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering admin/customers/edit.html.erb within layouts/application
+  Rendered admin/customers/edit.html.erb within layouts/application (5.0ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 136ms (Views: 132.3ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/admin/customers/3" for 211.131.70.241 at 2022-02-03 12:32:04 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dEiyTS9FRvpAKpwJ8t86c2p8H3ci+HDGMoVt69+W+NwWeTIoofFpCQvj/gGc/IZlTc1RGGHC5NQPbALlRAkxLQ==", "customer"=>{"first_name"=>"鈴木", "last_name"=>"一郎", "first_name_kana"=>"スズキ", "last_name_kana"=>"イチロウ", "postal_code"=>"1230000", "address"=>"神奈川県平塚市３−５", "telephone_number"=>"0389332245", "email"=>"suzuki@email", "is_active_method"=>"valid"}, "commit"=>"変更を保存", "id"=>"3"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Unpermitted parameter: :is_active_method
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://988bd93e29bc4baaa06b294c6c72dc7d.vfs.cloud9.us-east-1.amazonaws.com/admin/customers/3
+Completed 302 Found in 8ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/customers/3" for 211.131.70.241 at 2022-02-03 12:32:04 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering admin/customers/show.html.erb within layouts/application
+  Rendered admin/customers/show.html.erb within layouts/application (0.9ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 137ms (Views: 134.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/customers/3/edit" for 211.131.70.241 at 2022-02-03 12:32:06 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering admin/customers/edit.html.erb within layouts/application
+  Rendered admin/customers/edit.html.erb within layouts/application (2.0ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 141ms (Views: 120.8ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/admin/customers/3" for 211.131.70.241 at 2022-02-03 12:32:13 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d9NvNKFHddGcQ0p+dqtGbKFwSyVL5duYixKOu5MlWCYV4u9RL/NaIteKKHYYiPp6hsEFSgjfT4q2++G1CLqR1w==", "customer"=>{"first_name"=>"鈴木", "last_name"=>"一郎", "first_name_kana"=>"スズキ", "last_name_kana"=>"イチロウ", "postal_code"=>"12300001", "address"=>"神奈川県平塚市３−５", "telephone_number"=>"0389332245", "email"=>"suzuki@email"}, "commit"=>"変更を保存", "id"=>"3"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Update (2.1ms)[0m  [1m[33mUPDATE "customers" SET "postal_code" = ?, "updated_at" = ? WHERE "customers"."id" = ?[0m  [["postal_code", "12300001"], ["updated_at", "2022-02-03 12:32:13.421366"], ["id", 3]]
+  [1m[35m (8.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://988bd93e29bc4baaa06b294c6c72dc7d.vfs.cloud9.us-east-1.amazonaws.com/admin/customers/3
+Completed 302 Found in 19ms (ActiveRecord: 10.9ms)
+
+
+Started GET "/admin/customers/3" for 211.131.70.241 at 2022-02-03 12:32:13 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering admin/customers/show.html.erb within layouts/application
+  Rendered admin/customers/show.html.erb within layouts/application (1.6ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 127ms (Views: 124.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/customers/3/edit" for 211.131.70.241 at 2022-02-03 12:32:15 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering admin/customers/edit.html.erb within layouts/application
+  Rendered admin/customers/edit.html.erb within layouts/application (1.8ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 144ms (Views: 140.8ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/admin/customers/3" for 211.131.70.241 at 2022-02-03 12:32:19 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/44yV+AoWGTrepix1nPXQU/0Jwjw0QvV17Z8cL1FRKGdv7Iybpx3l6Cz+rm4UGtXaEVpZ7Prn8fqXxN+JtqNUA==", "customer"=>{"first_name"=>"鈴木", "last_name"=>"一郎", "first_name_kana"=>"スズキ", "last_name_kana"=>"イチロウ", "postal_code"=>"1230000", "address"=>"神奈川県平塚市３−５", "telephone_number"=>"0389332245", "email"=>"suzuki@email"}, "commit"=>"変更を保存", "id"=>"3"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Update (1.7ms)[0m  [1m[33mUPDATE "customers" SET "postal_code" = ?, "updated_at" = ? WHERE "customers"."id" = ?[0m  [["postal_code", "1230000"], ["updated_at", "2022-02-03 12:32:19.298897"], ["id", 3]]
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://988bd93e29bc4baaa06b294c6c72dc7d.vfs.cloud9.us-east-1.amazonaws.com/admin/customers/3
+Completed 302 Found in 14ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/admin/customers/3" for 211.131.70.241 at 2022-02-03 12:32:19 +0000
+Cannot render console from 211.131.70.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering admin/customers/show.html.erb within layouts/application
+  Rendered admin/customers/show.html.erb within layouts/application (2.0ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 126ms (Views: 123.0ms | ActiveRecord: 0.2ms)
+
+
