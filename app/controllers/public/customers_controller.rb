@@ -15,6 +15,7 @@ class Public::CustomersController < ApplicationController
   end
 
   def unsubsceibe
+    @customer = current_customer
   end
 
   def withdraw
