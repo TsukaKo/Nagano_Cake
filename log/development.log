@@ -36464,3 +36464,900 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/Nagano_Cake/app/models/application_record.rb:1)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/Nagano_Cake/app/models/application_record.rb:1)
+Started GET "/admin/sign_in" for 103.5.140.166 at 2022-02-05 01:18:11 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/sessions/new.html.erb within layouts/application (540.6ms)
+Completed 200 OK in 1273ms (Views: 1258.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admin/sign_in" for 103.5.140.166 at 2022-02-05 01:18:12 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 115ms (Views: 114.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/sign_in" for 103.5.140.166 at 2022-02-05 01:18:16 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/sessions/new.html.erb within layouts/application (1.7ms)
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 157ms (Views: 154.5ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/admin/sign_in" for 103.5.140.166 at 2022-02-05 01:18:25 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BK3Ak0y91qzrGQYaESoxkKqk0x9c/bqpSl8VyOfER8ef+LDYNCg00X6gYGyr0PqNAA4YFRpPRLsyiQXPlGSylg==", "admin"=>{"email"=>"aa@bb", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "aa@bb"], ["LIMIT", 1]]
+Redirected to https://988bd93e29bc4baaa06b294c6c72dc7d.vfs.cloud9.us-east-1.amazonaws.com/admin
+Completed 302 Found in 340ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 103.5.140.166 at 2022-02-05 01:18:26 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 2]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 3]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 4]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 5]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 6]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 7]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 8]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 9]]
+  Rendered admin/homes/top.html.erb within layouts/application (54.6ms)
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 183ms (Views: 168.4ms | ActiveRecord: 2.2ms)
+
+
+Started DELETE "/admin/sign_out" for 103.5.140.166 at 2022-02-05 01:18:34 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"rj1XY08BlCGjzxVHCHiQTdJSzhNvkxQKGLZlVby2/NUewEB/rgJjFAQe4Rhqi44WzqHBmD/7GcwMMDLSOOip1g=="}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://988bd93e29bc4baaa06b294c6c72dc7d.vfs.cloud9.us-east-1.amazonaws.com/admin/sign_in
+Completed 302 Found in 15ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/sign_in" for 103.5.140.166 at 2022-02-05 01:18:35 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 111ms (Views: 107.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 103.5.140.166 at 2022-02-05 01:18:39 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#about as HTML
+  Rendering public/homes/about.html.erb within layouts/application
+  Rendered public/homes/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 131ms (Views: 128.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/sign_in" for 103.5.140.166 at 2022-02-05 01:18:42 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::SessionsController#new as HTML
+  Rendering customers/sessions/new.html.erb within layouts/application
+  Rendered customers/shared/_error_messages.html.erb (0.5ms)
+  Rendered customers/sessions/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 119ms (Views: 117.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customers/sign_in" for 103.5.140.166 at 2022-02-05 01:19:07 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F/TtPau6fhbqG998626OulILHob6YUSMepY/tCZiJc0cfz1Ur5HTNWki0dav3ee/SdYu3wz0/ZrmcjkRVp6/Sg==", "customer"=>{"email"=>"inamori@email", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["email", "inamori@email"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 306ms (ActiveRecord: 0.2ms)
+
+
+Processing by Customers::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F/TtPau6fhbqG998626OulILHob6YUSMepY/tCZiJc0cfz1Ur5HTNWki0dav3ee/SdYu3wz0/ZrmcjkRVp6/Sg==", "customer"=>{"email"=>"inamori@email", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  Rendering customers/sessions/new.html.erb within layouts/application
+  Rendered customers/shared/_error_messages.html.erb (0.5ms)
+  Rendered customers/sessions/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 439ms (Views: 137.7ms | ActiveRecord: 0.0ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/Nagano_Cake/app/models/application_record.rb:1)
+  [1m[36mCustomer Load (1.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" LIMIT ?[0m  [["LIMIT", 11]]
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /home/ec2-user/environment/Nagano_Cake/app/models/application_record.rb:1)
+Started GET "/" for 103.5.140.166 at 2022-02-05 01:49:59 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" ASC LIMIT ?[0m  [["LIMIT", 4]]
+  Rendered public/homes/top.html.erb within layouts/application (353.3ms)
+Completed 200 OK in 723ms (Views: 698.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 103.5.140.166 at 2022-02-05 01:50:02 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" ASC LIMIT ?[0m  [["LIMIT", 4]]
+  Rendered public/homes/top.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 140ms (Views: 139.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 103.5.140.166 at 2022-02-05 01:50:19 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" ASC LIMIT ?[0m  [["LIMIT", 4]]
+  Rendered public/homes/top.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 149ms (Views: 146.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/customers/sign_in" for 103.5.140.166 at 2022-02-05 01:50:22 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::SessionsController#new as HTML
+  Rendering customers/sessions/new.html.erb within layouts/application
+  Rendered customers/shared/_error_messages.html.erb (0.5ms)
+  Rendered customers/sessions/new.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 204ms (Views: 189.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/customers/sign_up" for 103.5.140.166 at 2022-02-05 01:50:27 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::RegistrationsController#new as HTML
+  Rendering customers/registrations/new.html.erb within layouts/application
+  Rendered customers/shared/_error_messages.html.erb (0.8ms)
+  Rendered customers/registrations/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 205ms (Views: 203.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 103.5.140.166 at 2022-02-05 01:52:12 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#about as HTML
+  Rendering public/homes/about.html.erb within layouts/application
+  Rendered public/homes/about.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 134ms (Views: 132.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/sign_in" for 103.5.140.166 at 2022-02-05 01:52:19 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/sessions/new.html.erb within layouts/application (439.6ms)
+Completed 200 OK in 582ms (Views: 574.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/admin/sign_in" for 103.5.140.166 at 2022-02-05 01:52:27 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9nzp6a7NKN7UFPKPbExcuLSw65TLqkO7nZs6m/pvt/0PAmHVzxjIuW2j47POCti60ud5jP1SLU+1hEOQqXe5cQ==", "admin"=>{"email"=>"aa@bb", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "aa@bb"], ["LIMIT", 1]]
+Redirected to https://988bd93e29bc4baaa06b294c6c72dc7d.vfs.cloud9.us-east-1.amazonaws.com/admin
+Completed 302 Found in 326ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/admin" for 103.5.140.166 at 2022-02-05 01:52:27 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mOrderDetail Load (0.2ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 2]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 3]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 4]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 5]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 6]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 7]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 8]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 9]]
+  Rendered admin/homes/top.html.erb within layouts/application (54.4ms)
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 184ms (Views: 175.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/admin/genres" for 103.5.140.166 at 2022-02-05 01:52:33 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#index as HTML
+  Rendering admin/genres/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered admin/genres/index.html.erb within layouts/application (3.0ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 161ms (Views: 151.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin" for 103.5.140.166 at 2022-02-05 01:52:35 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 2]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 3]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 4]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 5]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 6]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 7]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 8]]
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 9]]
+  Rendered admin/homes/top.html.erb within layouts/application (17.1ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 153ms (Views: 149.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/customers" for 103.5.140.166 at 2022-02-05 01:52:35 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#index as HTML
+  Rendering admin/customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" ORDER BY "customers"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  Rendered admin/customers/index.html.erb within layouts/application (6.8ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 140ms (Views: 123.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/customers/1" for 103.5.140.166 at 2022-02-05 01:52:39 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/customers/show.html.erb within layouts/application
+  Rendered admin/customers/show.html.erb within layouts/application (0.9ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 137ms (Views: 131.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/customers/1/edit" for 103.5.140.166 at 2022-02-05 01:52:42 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/customers/edit.html.erb within layouts/application
+  Rendered admin/customers/edit.html.erb within layouts/application (6.6ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 148ms (Views: 138.4ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/admin/customers/1" for 103.5.140.166 at 2022-02-05 01:52:45 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2a1x9hYWYfwsVwcRSLPiD3LwnGsBoYp2ETC268U6F4uI99oRRAzqfpWZMBSEF/UqFwWMY20Of7PxGaDbjdxjog==", "customer"=>{"first_name"=>"坂本", "last_name"=>"拓", "first_name_kana"=>"サカモト", "last_name_kana"=>"タク", "postal_code"=>"1230000", "address"=>"神奈川県横浜市3", "telephone_number"=>"00011111", "email"=>"sakamoto@takuu", "is_active_method"=>"Withdrawal"}, "commit"=>"変更を保存", "id"=>"1"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :is_active_method
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://988bd93e29bc4baaa06b294c6c72dc7d.vfs.cloud9.us-east-1.amazonaws.com/admin/customers/1
+Completed 302 Found in 13ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/customers/1" for 103.5.140.166 at 2022-02-05 01:52:45 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/customers/show.html.erb within layouts/application
+  Rendered admin/customers/show.html.erb within layouts/application (1.1ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 150ms (Views: 147.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/customers/1/edit" for 103.5.140.166 at 2022-02-05 01:52:49 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/customers/edit.html.erb within layouts/application
+  Rendered admin/customers/edit.html.erb within layouts/application (1.8ms)
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 139ms (Views: 135.4ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/admin/customers/1" for 103.5.140.166 at 2022-02-05 01:52:52 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zehu+K396o7L6IFxcbGC+p1TopraeoqcqEnXBvTfnECcssUf/+dhDHImtnS9FZXf+KaykrbVf1lIYME2vDnoaQ==", "customer"=>{"first_name"=>"坂本", "last_name"=>"拓", "first_name_kana"=>"サカモト", "last_name_kana"=>"タク", "postal_code"=>"1230000", "address"=>"神奈川県横浜市3", "telephone_number"=>"00011111", "email"=>"sakamoto@takuu", "is_active_method"=>"Withdrawal"}, "commit"=>"変更を保存", "id"=>"1"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :is_active_method
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://988bd93e29bc4baaa06b294c6c72dc7d.vfs.cloud9.us-east-1.amazonaws.com/admin/customers/1
+Completed 302 Found in 6ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/customers/1" for 103.5.140.166 at 2022-02-05 01:52:52 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/customers/show.html.erb within layouts/application
+  Rendered admin/customers/show.html.erb within layouts/application (1.0ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 166ms (Views: 163.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/customers/1/edit" for 103.5.140.166 at 2022-02-05 01:52:57 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/customers/edit.html.erb within layouts/application
+  Rendered admin/customers/edit.html.erb within layouts/application (1.8ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 134ms (Views: 130.8ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/admin/customers/1" for 103.5.140.166 at 2022-02-05 01:53:01 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7VS54Xo2ROqP4RyEoLP5CoapU2+/nRg9pG7rGTZWouS8DhIGKCzPaDYvK4FsF+4v41xDZ9My7fhER/0pfrDWzQ==", "customer"=>{"first_name"=>"坂本", "last_name"=>"拓", "first_name_kana"=>"サカモト", "last_name_kana"=>"タク", "postal_code"=>"1230000", "address"=>"神奈川県横浜市3", "telephone_number"=>"00011111", "email"=>"sakamoto@takuu", "is_active_method"=>"Withdrawal"}, "commit"=>"変更を保存", "id"=>"1"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :is_active_method
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://988bd93e29bc4baaa06b294c6c72dc7d.vfs.cloud9.us-east-1.amazonaws.com/admin/customers/1
+Completed 302 Found in 7ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/customers/1" for 103.5.140.166 at 2022-02-05 01:53:02 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/customers/show.html.erb within layouts/application
+  Rendered admin/customers/show.html.erb within layouts/application (0.9ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 140ms (Views: 137.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/items" for 103.5.140.166 at 2022-02-05 01:57:59 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#index as HTML
+  Rendering admin/items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  Rendered admin/items/index.html.erb within layouts/application (23.5ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 150ms (Views: 145.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/items/2" for 103.5.140.166 at 2022-02-05 01:58:01 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering admin/items/show.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered admin/items/show.html.erb within layouts/application (2.9ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 176ms (Views: 171.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/items/2/edit" for 103.5.140.166 at 2022-02-05 01:58:03 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering admin/items/edit.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered admin/items/edit.html.erb within layouts/application (7.1ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 161ms (Views: 156.0ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/admin/items/2" for 103.5.140.166 at 2022-02-05 01:58:11 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4qHWCtcEYJ3wKTe4qvRmnZ1kFkzvoiNN4udo3OhjJzLaT8ChBHtWV+BVjuv294pL5JllI7lH9dc5T39jfPBeJw==", "item"=>{"image"=>"{}", "name"=>"イタリアンショートケーキ", "introduction"=>"a", "genre_id"=>"1", "price"=>"300", "is_active"=>"true"}, "commit"=>"変更を保存", "id"=>"2"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Update (2.6ms)[0m  [1m[33mUPDATE "items" SET "image_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["image_id", nil], ["updated_at", "2022-02-05 01:58:11.038196"], ["id", 2]]
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://988bd93e29bc4baaa06b294c6c72dc7d.vfs.cloud9.us-east-1.amazonaws.com/admin/items/2
+Completed 302 Found in 19ms (ActiveRecord: 9.7ms)
+
+
+Started GET "/admin/items/2" for 103.5.140.166 at 2022-02-05 01:58:11 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering admin/items/show.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered admin/items/show.html.erb within layouts/application (2.8ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 127ms (Views: 124.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/items/2/edit" for 103.5.140.166 at 2022-02-05 02:02:58 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering admin/items/edit.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered admin/items/edit.html.erb within layouts/application (4.1ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 146ms (Views: 142.9ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/admin/items/2" for 103.5.140.166 at 2022-02-05 02:03:00 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kXSw2cX9zObq7rV+pHmlUOUH/88Xmrj0hKVj+0dlG/ypmqZyFoL6LPqSDC34ekmGnPqMoEF/bm5fDXRE0/Zi6Q==", "item"=>{"image"=>"{}", "name"=>"イタリアンショートケーキ", "introduction"=>"a", "genre_id"=>"1", "price"=>"300", "is_active"=>"true"}, "commit"=>"変更を保存", "id"=>"2"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Update (2.2ms)[0m  [1m[33mUPDATE "items" SET "image_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["image_id", nil], ["updated_at", "2022-02-05 02:03:00.566507"], ["id", 2]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://988bd93e29bc4baaa06b294c6c72dc7d.vfs.cloud9.us-east-1.amazonaws.com/admin/items/2
+Completed 302 Found in 16ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/admin/items/2" for 103.5.140.166 at 2022-02-05 02:03:00 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering admin/items/show.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered admin/items/show.html.erb within layouts/application (4.6ms)
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 137ms (Views: 134.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/customers" for 103.5.140.166 at 2022-02-05 02:03:01 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#index as HTML
+  Rendering admin/customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" ORDER BY "customers"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  Rendered admin/customers/index.html.erb within layouts/application (4.0ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 242ms (Views: 240.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/customers/1" for 103.5.140.166 at 2022-02-05 02:03:03 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/customers/show.html.erb within layouts/application
+  Rendered admin/customers/show.html.erb within layouts/application (1.0ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 155ms (Views: 150.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/customers/1/edit" for 103.5.140.166 at 2022-02-05 02:03:04 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/customers/edit.html.erb within layouts/application
+  Rendered admin/customers/edit.html.erb within layouts/application (2.0ms)
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 136ms (Views: 132.1ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/admin/customers/1" for 103.5.140.166 at 2022-02-05 02:03:07 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eBlLqv/D7Db+yoCqzha1KuqtIJUCmxTNz/l2ZyAXSjkpQ+BNrdlntEcEt68CsqIPj1gwnW404Qgv0GBXaPE+EA==", "customer"=>{"first_name"=>"坂本", "last_name"=>"拓", "first_name_kana"=>"サカモト", "last_name_kana"=>"タク", "postal_code"=>"1230000", "address"=>"神奈川県横浜市3", "telephone_number"=>"00011111", "email"=>"sakamoto@takuu", "is_active"=>"false"}, "commit"=>"変更を保存", "id"=>"1"}
+  [1m[36mCustomer Load (1.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 1.2ms)
+
+
+  
+ArgumentError ('false' is not a valid is_active):
+  
+app/controllers/admin/customers_controller.rb:18:in `update'
+Started PATCH "/admin/customers/1" for 103.5.140.166 at 2022-02-05 02:05:20 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K+Z8KA8m5QAab24WrBnwbnXNy5W/cfWdnDgHtwfkTesShaacuGNXedGchGpLmgWMLs1GkxG79T6mwYuoJYibqA==", "customer"=>{"first_name"=>"坂本", "last_name"=>"拓", "first_name_kana"=>"サカモト", "last_name_kana"=>"タク", "postal_code"=>"1230000", "address"=>"神奈川県横浜市3", "telephone_number"=>"00011111", "email"=>"sakamoto@takuu", "is_active"=>"false"}, "commit"=>"変更を保存", "id"=>"1"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 2.2ms)
+
+
+  
+ArgumentError ('false' is not a valid is_active):
+  
+app/controllers/admin/customers_controller.rb:18:in `update'
+Started PATCH "/admin/customers/1" for 103.5.140.166 at 2022-02-05 02:07:05 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CustomersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K+Z8KA8m5QAab24WrBnwbnXNy5W/cfWdnDgHtwfkTesShaacuGNXedGchGpLmgWMLs1GkxG79T6mwYuoJYibqA==", "customer"=>{"first_name"=>"坂本", "last_name"=>"拓", "first_name_kana"=>"サカモト", "last_name_kana"=>"タク", "postal_code"=>"1230000", "address"=>"神奈川県横浜市3", "telephone_number"=>"00011111", "email"=>"sakamoto@takuu", "is_active"=>"false"}, "commit"=>"変更を保存", "id"=>"1"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.9ms)
+
+
+  
+ArgumentError ('false' is not a valid is_active):
+  
+app/controllers/admin/customers_controller.rb:18:in `update'
+Started DELETE "/admin/sign_out" for 103.5.140.166 at 2022-02-05 02:18:17 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"K+Z8KA8m5QAab24WrBnwbnXNy5W/cfWdnDgHtwfkTesShaacuGNXedGchGpLmgWMLs1GkxG79T6mwYuoJYibqA=="}
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://988bd93e29bc4baaa06b294c6c72dc7d.vfs.cloud9.us-east-1.amazonaws.com/admin/sign_in
+Completed 302 Found in 24ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/sign_in" for 103.5.140.166 at 2022-02-05 02:18:18 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/sessions/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 160ms (Views: 159.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/sign_in" for 103.5.140.166 at 2022-02-05 02:18:21 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::SessionsController#new as HTML
+  Rendering customers/sessions/new.html.erb within layouts/application
+  Rendered customers/shared/_error_messages.html.erb (0.5ms)
+  Rendered customers/sessions/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 290ms (Views: 275.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/customers/sign_up" for 103.5.140.166 at 2022-02-05 02:18:23 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::RegistrationsController#new as HTML
+  Rendering customers/registrations/new.html.erb within layouts/application
+  Rendered customers/shared/_error_messages.html.erb (0.5ms)
+  Rendered customers/registrations/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 129ms (Views: 127.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customers" for 103.5.140.166 at 2022-02-05 02:20:47 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customers::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"moI+qKh07EpUekk+LA71sg6sbyhvQ0UXJIIvFckiyvFuoUjKU82u8A+kOVfTfbFA5apLFyZKEyMfuiAg+/w0Eg==", "customer"=>{"first_name"=>"佐藤", "last_name"=>"太郎", "first_name_kana"=>"サトウ", "last_name_kana"=>"タロウ", "email"=>"satou@taro", "postal_code"=>"1710052", "address"=>"東京都豊島区池袋３", "telephone_number"=>"0339572100", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"新規登録"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "customers" WHERE "customers"."email" = ? LIMIT ?[0m  [["email", "satou@taro"], ["LIMIT", 1]]
+  [1m[36mCustomer Create (6.3ms)[0m  [1m[32mINSERT INTO "customers" ("email", "encrypted_password", "last_name", "first_name", "last_name_kana", "first_name_kana", "postal_code", "address", "telephone_number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "satou@taro"], ["encrypted_password", "$2a$12$4oxikt4CuJp0BLhXPtNkHO87UHAC8Yo2HDtoTvAee03Igt4Bsl2S."], ["last_name", "太郎"], ["first_name", "佐藤"], ["last_name_kana", "タロウ"], ["first_name_kana", "サトウ"], ["postal_code", "1710052"], ["address", "東京都豊島区池袋３"], ["telephone_number", "0339572100"], ["created_at", "2022-02-05 02:20:48.179671"], ["updated_at", "2022-02-05 02:20:48.179671"]]
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://988bd93e29bc4baaa06b294c6c72dc7d.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 399ms (ActiveRecord: 12.4ms)
+
+
+Started GET "/" for 103.5.140.166 at 2022-02-05 02:20:48 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" ASC LIMIT ?[0m  [["LIMIT", 4]]
+  Rendered public/homes/top.html.erb within layouts/application (12.5ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 170ms (Views: 163.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/customers/4" for 103.5.140.166 at 2022-02-05 02:20:52 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering public/customers/show.html.erb within layouts/application
+  Rendered public/customers/show.html.erb within layouts/application (1.0ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 138ms (Views: 133.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/items" for 103.5.140.166 at 2022-02-05 02:29:38 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::ItemsController#index as HTML
+  Rendering public/items/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  Rendered public/items/index.html.erb within layouts/application (18.9ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 182ms (Views: 178.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/customers/4" for 103.5.140.166 at 2022-02-05 02:29:40 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering public/customers/show.html.erb within layouts/application
+  Rendered public/customers/show.html.erb within layouts/application (1.0ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 161ms (Views: 158.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers/4/edit" for 103.5.140.166 at 2022-02-05 02:29:43 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering public/customers/edit.html.erb within layouts/application
+  Rendered public/customers/edit.html.erb within layouts/application (7.5ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 151ms (Views: 148.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/unsubsceibe" for 103.5.140.166 at 2022-02-05 02:29:45 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+AbstractController::ActionNotFound (The action 'unsubsceibe' could not be found for Public::CustomersController):
+  
+actionpack (5.2.6) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.6) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.6) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.6) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/customers/4/edit" for 103.5.140.166 at 2022-02-05 02:31:50 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering public/customers/edit.html.erb within layouts/application
+  Rendered public/customers/edit.html.erb within layouts/application (1.6ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 166ms (Views: 158.1ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/customers/4" for 103.5.140.166 at 2022-02-05 02:31:57 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"or+GiKrEtGn4IgImiq71S2LrHaPTBnmK/Dbz2U8+f+NicYpOQ4u6p36vMCDSuN8b1Lij0FlOIAOiX/EV+oiEvA==", "customer"=>{"first_name"=>"佐藤", "last_name"=>"太郎", "first_name_kana"=>"サトウあ", "last_name_kana"=>"タロウ", "postal_code"=>"1710052", "address"=>"東京都豊島区池袋３", "telephone_number"=>"0339572100", "email"=>"satou@taro"}, "commit"=>"編集内容を保存", "id"=>"4"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Update (2.6ms)[0m  [1m[33mUPDATE "customers" SET "first_name_kana" = ?, "updated_at" = ? WHERE "customers"."id" = ?[0m  [["first_name_kana", "サトウあ"], ["updated_at", "2022-02-05 02:31:57.790820"], ["id", 4]]
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://988bd93e29bc4baaa06b294c6c72dc7d.vfs.cloud9.us-east-1.amazonaws.com/customers/4
+Completed 302 Found in 15ms (ActiveRecord: 8.5ms)
+
+
+Started GET "/customers/4" for 103.5.140.166 at 2022-02-05 02:31:57 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering public/customers/show.html.erb within layouts/application
+  Rendered public/customers/show.html.erb within layouts/application (1.9ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 123ms (Views: 121.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers/4/edit" for 103.5.140.166 at 2022-02-05 02:32:02 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering public/customers/edit.html.erb within layouts/application
+  Rendered public/customers/edit.html.erb within layouts/application (2.3ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 183ms (Views: 179.9ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/customers/4" for 103.5.140.166 at 2022-02-05 02:32:10 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"csjD4s82XpKOQoYF9kyA9cG1YVynE5zt+54NaDuZ6PD4w03b7ojTFWzWRU4RD4UOiwmm2SQLVwQcr/SEG57Tbg==", "customer"=>{"first_name"=>"佐藤", "last_name"=>"太郎", "first_name_kana"=>"サトウ", "last_name_kana"=>"タロウ", "postal_code"=>"1710052", "address"=>"東京都豊島区池袋３", "telephone_number"=>"0339572100", "email"=>"satou@taro"}, "commit"=>"編集内容を保存", "id"=>"4"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCustomer Update (2.1ms)[0m  [1m[33mUPDATE "customers" SET "first_name_kana" = ?, "updated_at" = ? WHERE "customers"."id" = ?[0m  [["first_name_kana", "サトウ"], ["updated_at", "2022-02-05 02:32:10.019807"], ["id", 4]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://988bd93e29bc4baaa06b294c6c72dc7d.vfs.cloud9.us-east-1.amazonaws.com/customers/4
+Completed 302 Found in 18ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/customers/4" for 103.5.140.166 at 2022-02-05 02:32:10 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering public/customers/show.html.erb within layouts/application
+  Rendered public/customers/show.html.erb within layouts/application (1.9ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 211ms (Views: 206.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers/4/edit" for 103.5.140.166 at 2022-02-05 02:32:26 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::CustomersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering public/customers/edit.html.erb within layouts/application
+  Rendered public/customers/edit.html.erb within layouts/application (2.3ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 132ms (Views: 129.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/unsubsceibe" for 103.5.140.166 at 2022-02-05 02:32:27 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+AbstractController::ActionNotFound (The action 'unsubsceibe' could not be found for Public::CustomersController):
+  
+actionpack (5.2.6) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.6) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.6) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.6) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 103.5.140.166 at 2022-02-05 02:35:02 +0000
+Cannot render console from 103.5.140.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" ASC LIMIT ?[0m  [["LIMIT", 4]]
+  Rendered public/homes/top.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 165ms (Views: 158.7ms | ActiveRecord: 0.8ms)
+
+

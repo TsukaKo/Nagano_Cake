@@ -23,9 +23,9 @@
         <h4>メールアドレス</h4>
         <%= f.text_field :email %>
         <h4>会員ステータス</h4>
-        <%= f.radio_button :is_active_method, "valid" %>
+        <%= f.radio_button :is_active, :true %>
         <%= f.label :is_active_method, "有効" %>
-        <%= f.radio_button :is_active_method, "Withdrawal" %>
+        <%= f.radio_button :is_active, :false %>
         <%= f.label :is_active_method, "退会" %>
         <%= f.submit "変更を保存", class:"btn btn-success" %>
         <% end %>
